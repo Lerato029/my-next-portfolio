@@ -1,3 +1,4 @@
+/* global css to be imported in the _app.js wrapper component */
 html,
 body {
   padding: 0;

@@ -1,0 +1,83 @@
+/* Header Title  */
+.title {
+  padding-top: 50px;
+  margin: 0;
+  line-height: 1.15;
+  font-size: 4rem;
+}
+
+.title,
+.description {
+  text-align: center;
+}
+
+/* description of author developer portfolio */
+.description {
+  line-height: 1.5;
+  font-size: 1.5rem;
+}
+
+/* Social media links... */
+.socialMedia {
+  height: 50px;
+  padding: 10px;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.socialMedia ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+.socialMedia li {
+  margin: 10px;
+  height: 80px;
+  width: 80px;
+  background-color: black;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.socialMedia a {
+  text-decoration: none;
+  padding: 2px 10px;
+  /* border-radius: 5px; */
+}
+
+/* hover effect... */
+.socialMedia li:hover {
+  text-decoration: none;
+  background-color: orangered;
+  /* animation called */
+  animation-name: bounce;
+  animation-timing-function: ease;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    transform: scale(1.1, 0.9) translateY(0);
+  }
+  30% {
+    transform: scale(0.9, 1.1) translateY(-100px);
+  }
+  50% {
+    transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
+}
