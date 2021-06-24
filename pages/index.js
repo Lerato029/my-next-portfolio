@@ -18,7 +18,6 @@ export default function Home() {
       </div>
       <h3>
         Hi, my name is Lerato Mokgwabona. I'm an entry level Front-End Web
-        {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}
         Developer and I enjoy solving problems, coding, design and art. I come
         from an Architectural background however, have been fascinated by the
         tech industry, the virtual platforms created to improve the way we live
