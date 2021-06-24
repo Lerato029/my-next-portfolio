@@ -6,6 +6,7 @@ export default function Home() {
     <div>
       <head>
         <title>Home</title>
+        
       </head>
       <div className="profilePic">
         <Image
