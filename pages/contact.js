@@ -1,7 +1,6 @@
 //import layout styles from the styles folder
 import styles from "../styles/Layout.module.css";
 
-
 export default function contact() {
   return (
     <div>
@@ -10,20 +9,17 @@ export default function contact() {
       </head>
       <div>
         <main className={styles.main}>
-          <h1 className={styles.title}>
-            Feel Free To Contact Me
-          </h1>
-
-          <div className={styles.grid}>
-            <div className={styles.card}>
-              <h2>Contact Details:</h2>
-              <p>
+          <h1 className={styles.title}>Feel Free To Contact Me</h1>
+          <div className="card" style={{ width: "18rem" }}>
+            <div className="card-body">
+              <h5 className="card-title">Contact Details:</h5>
+              <p className="card-text">
                 <strong>Phone: </strong> +27745012148
               </p>
-              <p>
+              <p className="card-text">
                 <strong>Email: </strong> lerato.m029@gmail.com
               </p>
-              <p>
+              <p className="card-text">
                 <strong>Location: </strong> Germiston, South Africa
               </p>
             </div>

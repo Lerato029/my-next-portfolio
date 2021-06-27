@@ -20,10 +20,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 1.25rem;
   width: 100%;
 }
-
 
 /* parent element for .card elements */
 .grid {
@@ -57,12 +55,10 @@
 
 .card h2 {
   margin: 0 0 1rem 0;
-  font-size: 1.5rem;
 }
 
 .card p {
   margin: 0;
-  font-size: 1.25rem;
   line-height: 1.5;
 }
 
@@ -73,7 +69,7 @@
 /* skills section "tabs" */
 .skills {
   display: flex;
-  flex-wrap: wrap 
+  flex-wrap: wrap;
 }
 
 .skills div {
@@ -83,4 +79,43 @@
   color: white;
   margin-top: 0.5rem;
   margin-right: 0.5rem;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+
+  /* parent element for .grid elements */
+  .main {
+    padding: 2.5rem 0;
+
+    width: 100%;
+  }
+
+  /* parent element for .card elements */
+  .grid {
+    width: 350px;
+    margin-top: 1.5rem;
+  }
+
+  /* card elements containing information about me */
+  .card {
+    margin: 0.5rem;
+    padding: 0.25rem;
+    border-radius: 5px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    width: 100%;
+  }
+
+  .card h2 {
+    margin: 0 0 0.5rem 0;
+  }
+
+  .skills div {
+    padding: 1px 5px;
+    border-radius: 2px;
+    margin-top: 0.25rem;
+    margin-right: 0.25rem;
+  }
 }

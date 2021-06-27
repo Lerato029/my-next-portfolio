@@ -5,12 +5,11 @@ import headerStyle from "../styles/Header.module.css";
 import Nav from "./Nav";
 
 export default function Header() {
-  const x = 5;
   return (
     <div className="background">
       <h1 className={headerStyle.title}>Developer Portfolio</h1>
-      <p className={headerStyle.description}>By Lerato Mokgwabona</p>
-      <p className="p">5</p>
+      <br />
+      <br />
       <ul class={headerStyle.socialMedia}>
         <li>
           <a href="https://github.com/Lerato029" target="_blank">
@@ -32,7 +31,6 @@ export default function Header() {
         </li>
       </ul>
       <Nav />
-      
     </div>
   );
 }
