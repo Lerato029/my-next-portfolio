@@ -22,9 +22,9 @@ export default function Home() {
         industry. I look forward to working along side UX and UI designers to
         create platforms that provide the best experience for the users and be a
         part of the community of developers who create platforms that connect
-        people. See how tp contact me{" "}
+        people. See how to contact me{" "}
         <Link href="/contact">
-          <strong className="text-secondary" style={{ cursor: "pointer" }}>
+          <strong className="text-primary" style={{ cursor: "pointer" }}>
             here
           </strong>
         </Link>
