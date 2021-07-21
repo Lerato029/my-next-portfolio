@@ -1,0 +1,34 @@
+.btn-success {
+  background: $dark;
+  border: $dark;
+}
+.btn-success:hover {
+  background: $aqua;
+}
+
+.btn-danger {
+  background: $red;
+  border: $red;
+}
+.btn-danger:hover {
+  background: $mustard;
+}
+
+.btn-info {
+  background: $mint;
+  border: $mint;
+  color: $dark;
+}
+.btn-info:hover {
+  background: $aqua;
+}
+
+.btn-warning {
+  background: $yellow;
+  border: $yellow;
+  color: white;
+}
+.btn-warning:hover {
+  background: $mustard;
+  color: white;
+}

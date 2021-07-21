@@ -1,0 +1,71 @@
+@mixin fixedBg {
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: center;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@import "./_variables.scss";
+@import "./_footer.scss";
+@import "./_animate.scss";
+@import "./_buttons.scss";
+@import "./_text.scss";
+@import "./_bgs.scss";
+@import "./_loading.scss";
+
+.middle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  border-radius: 0;
+  border: none;
+}
+
+
+a {
+  cursor: pointer;
+}
+
+a:hover {
+  color: $dark;
+}
+
+.opaqueBorder {
+  border: 1px solid #4ca9bc56;
+}
+.opaque {
+  background: #4ca9bc28;
+}
+
+.landing {
+  @include fixedBg();
+}
+
+.navbar {
+  background: $aqua;
+  color: $dark;
+}
+
+.active {
+  border-left: 1px solid white;
+}
+
+.prime {
+  transition-duration: 1s;
+  cursor: pointer;
+}
+
+.prime:hover {
+  transform: scale(0.9);
+  .card {
+    background: $aqua !important;
+  }
+}

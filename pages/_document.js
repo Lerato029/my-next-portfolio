@@ -29,6 +29,9 @@ export default class MyDocument extends Document {
           `,
             }}
           />
+          <script
+            src={`https://www.paypal.com/sdk/js?client-id=${process.env.PAYPAL_CLIENT_ID}`}
+          ></script>
         </Head>
         <body>
           <Main />
