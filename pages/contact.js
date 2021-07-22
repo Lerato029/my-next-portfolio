@@ -78,8 +78,8 @@ export default function contact() {
         <h2 className="mb-5 text-center">Contact Details</h2>
       </div>
       <div className="row row-cols-1 row-cols-md-3 m-0 ">
-        {contact.map((info, index) => (
-          <div key={index} className="col mx-0 gx-0 prime">
+        {contact.map((info) => (
+          <div key={info.name} className="col mx-0 gx-0 prime">
             <div
               className="card  text-white "
               style={{

@@ -54,9 +54,9 @@ export default function projects() {
       </head>
       <Nav />
       <div className="landing">
-        <h2 className="mb-5">Recent Projects</h2>
+        <h2 className="mb-2 text-uppercase">Recent Projects</h2>
       </div>
-      <div className="container text-center">
+      <div className="container text-center mt-0">
         <div className="row row-cols-1 row-cols-md-2  ">
           {projects.map((project, index) => (
             <>
@@ -90,14 +90,20 @@ export default function projects() {
                   )}
 
                   <div className="card-img-overlay mt-5  middle">
-                    <a href={`${project.url}`} target="_blank">
-                      <h1
-                        className="card-title fw-bold"
-                        style={{ cursor: "pointer" }}
+                    {project.url && (
+                      <a
+                        className="btn btn-outline"
+                        href={`${project.url}`}
+                        target="_blank"
                       >
-                        {project.name}
-                      </h1>
-                    </a>
+                        <h1
+                          className="card-title fw-bold "
+                          style={{ cursor: "pointer" }}
+                        >
+                          {project.name}
+                        </h1>
+                      </a>
+                    )}
 
                     <h5 className="mt-5 mx-3">{project.description}</h5>
 
@@ -141,14 +147,20 @@ export default function projects() {
                   )}
 
                   <div className="card-img-overlay mt-5 middle">
-                    <a href={`${project.url2}`} target="_blank">
-                      <h1
-                        className="card-title fw-bold "
-                        style={{ cursor: "pointer" }}
+                    {project.url2 && (
+                      <a
+                        className="btn btn-outline"
+                        href={`${project.url2}`}
+                        target="_blank"
                       >
-                        {project.name2}
-                      </h1>
-                    </a>
+                        <h1
+                          className="card-title fw-bold "
+                          style={{ cursor: "pointer" }}
+                        >
+                          {project.name2}
+                        </h1>
+                      </a>
+                    )}
 
                     <h5 className="mt-5 mx-3">{project.description2}</h5>
 

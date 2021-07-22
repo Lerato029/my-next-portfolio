@@ -121,8 +121,8 @@ export default function Home() {
       </div>
 
       <div className="row row-cols-1 row-cols-md-4  m-0">
-        {me.map((details, index) => (
-          <div key={index} className="col mx-0 gx-0 ">
+        {me.map((details) => (
+          <div key={details.name} className="col mx-0 gx-0 ">
             <div
               className="card  text-white "
               style={{
@@ -167,8 +167,8 @@ export default function Home() {
       </div>
       <div className="container text-center">
         <div className="row row-cols-1 row-cols-md-2  ">
-          {blogs.map((blog, index) => (
-            <div key={index} className="col mx-0 gx-0 prime">
+          {blogs.map((blog) => (
+            <div key={blog.bg} className="col mx-0 gx-0 prime">
               <div
                 className="card  text-white "
                 style={{

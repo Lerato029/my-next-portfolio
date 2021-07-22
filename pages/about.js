@@ -28,7 +28,7 @@ export default function about() {
       case "wits":
         setInfo({
           company: "Wits University",
-          year: "2014-2017 & 2020",
+          year: "2015-2017 & 2020",
           qualification: "BAS & BAS Honours",
           description: `My four years with Wit's School of Architecture and planning I learned how to 
           think like a designer and to think divergently. An Architectural degree is 
@@ -104,7 +104,7 @@ export default function about() {
       <div
         className="card  text-white landing bgDark"
         style={{
-          height: "120vh",
+          height: "100vh",
           width: "100%",
           borderRadius: "0",
           border: "none",
@@ -114,10 +114,12 @@ export default function about() {
           className="card-img"
           src="/about.svg"
           style={{
-            maxWidth: "20%",
+            maxWidth: "35%",
           }}
         />
-        <h1 className="fw-bold text-uppercase">about me</h1>
+        <a className="btn btn-outline mt-3" href="#about">
+          <h2 className="fw-bold text-uppercase ">about me</h2>
+        </a>
       </div>
 
       <div
@@ -152,7 +154,7 @@ export default function about() {
         </div>
       </div>
 
-      <div className="row row-cols-1 row-cols-xl-2 m-0 ">
+      <div id="about" className="row row-cols-1 row-cols-xl-2 m-0 ">
         <div className="col mx-0 gx-0   ">
           <div
             className="card  text-white middle"

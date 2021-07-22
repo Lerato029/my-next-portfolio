@@ -6,6 +6,17 @@
   background: $aqua;
 }
 
+.btn-outline {
+  color: white;
+  border: 1px solid white;
+  border-radius: 0.6rem;
+  transition-duration: 1s;
+}
+.btn-outline:hover {
+  color: $mint;
+  transform: scale(1.05);
+}
+
 .btn-danger {
   background: $red;
   border: $red;
