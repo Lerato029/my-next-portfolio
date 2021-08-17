@@ -68,7 +68,7 @@ export default function Home() {
             className="card  text-white "
             style={{
               height: "100%",
-              widht: "100%",
+              width: "100%",
               borderRadius: "0",
             }}
           >

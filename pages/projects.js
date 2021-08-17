@@ -42,7 +42,7 @@ export default function projects() {
       bg: "bgMint",
       url: "https://frozen-headland-60618.herokuapp.com/",
       description:
-        "The Thabisa Baby House website is a full-stack MERN application using Next.js.",
+        "React and Express App that allows you to create a bucket list of content from iTunes to iBooks.",
       img2: "/faves.png",
       git: "https://github.com/Lerato029/my-faves",
     },
@@ -54,7 +54,9 @@ export default function projects() {
       </head>
       <Nav />
       <div className="landing">
-        <h2 className="mb-2 text-uppercase">Recent Projects</h2>
+        <h2 id="top" className=" text-uppercase">
+          Recent Projects
+        </h2>
       </div>
       <div className="container text-center mt-0">
         <div className="row row-cols-1 row-cols-md-2  ">
@@ -191,7 +193,7 @@ export default function projects() {
             </button>
           </Link>
           <Link href="/contact">
-            <button type="button" className="btn btn-success fw-bold">
+            <button type="button" className="btn btn-success fw-bold ">
               Contact Me
             </button>
           </Link>

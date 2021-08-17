@@ -6,6 +6,8 @@ export default class MyDocument extends Document {
       <Html>
         <Head>
           <meta name="description" content="Portfolio" />
+          <link rel="shortcut icon" href="/favicon.ico" />
+
           <link
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
             rel="stylesheet"

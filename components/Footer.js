@@ -1,11 +1,16 @@
 export default function Footer() {
   return (
     <div className="mt-5">
-      <ul className="socialMedia fw-bold ">
+      <a href="#top" className="mb-5 text-center">
+        <h1>
+          <i className="fas fa-chevron-up "></i>
+        </h1>
+      </a>
+      <ul className="socialMedia fw-bold mt-5">
         <li title="Github">
           <div>
             <a href="https://github.com/Lerato029" target="_blank">
-              <i className="fab fa-github"></i>
+              <i className="fab fa-github "></i>
               <br />
             </a>
           </div>
