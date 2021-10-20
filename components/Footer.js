@@ -25,7 +25,7 @@ export default function Footer() {
           </a>
         </li>
         <li title="Instagram">
-          <a href="https://www.instagram.com/uibylerato/" target="_blank">
+          <a href="https://www.instagram.com/leratolatech/" target="_blank">
             <i className="fab fa-instagram"></i>
           </a>
         </li>
