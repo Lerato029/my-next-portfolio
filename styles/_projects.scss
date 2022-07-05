@@ -1,0 +1,16 @@
+.projectsSections {
+    height: '120vh';
+    width: 100%;
+}
+
+.prime {
+    transition-duration: 1s;
+    cursor: pointer;
+}
+
+.prime:hover {
+    transform: scale(0.9);
+    .card {
+        background: $aqua !important;
+    }
+}

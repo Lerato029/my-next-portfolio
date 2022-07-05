@@ -5,7 +5,9 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <meta name="description" content="Portfolio" />
+          <meta name="description" content="Developer and Design Portfolio Website by Lerato Mokgwabona" />
+          <meta name="robots" content="index, follow"/>
+          <meta name="keywords" content="Front-End Developer, UX/UI Designer, South Africa, Lerato Mokgwabona, South African Front-End Developer"/>
           <link rel="shortcut icon" href="/favicon.ico" />
 
           <link
