@@ -1,28 +1,27 @@
 import nodemailer from "nodemailer";
+import mail from "@sendgrid/mail";
+mail.setApiKey(process.env.SENDGRID_API_KEY);
 //object storing information on how we want to send our emails
 //PORT 465 FOR SMTP communication
 export default async (req, res) => {
   /* let nodemailer = require("nodemailer"); */
-  const transporter = await nodemailer.createTransport({
-    port: 465,
-    host: "smtp.gmail.com",
-    auth: {
-      user: "portfoliobylerato@gmail.com",
-      pass: process.env.EMAIL_PASSWORD,
-    },
-    secure: true,
-  });
-  const mailData = {
-    from: "portfoliobylerato@gmail.com",
-    to: "lerato.m029@gmail.com",
-    subject: `Message From ${req.body.name}`,
-    text: req.body.message + " | Sent from: " + req.body.email,
-    html: `<div>${req.body.message}</div><p>Sent from:
-      ${req.body.email}</p>`,
+  const body = req.body;
+
+  const mailData = `
+  Name: ${body.name}\r\n
+  Email: ${body.email}\r\n
+  Message: ${body.message}\r\n
+  `;
+
+  const data = {
+    to: "leratomokgwabona@gmail.com",
+    from: "leratomokgwabona@gmail.com",
+    subject: "Portfolio Mail!",
+    text: mailData,
+    html: mailData.replace(/\r\n/g, "<br/>"),
   };
-  await transporter.sendMail(mailData, (err, info) => {
-    if (info) {
-      res.json({ msg: "great!" });
-    }
-  });
+
+  mail.send(data);
+
+  res.status(200).json({ msg: "great!" });
 };

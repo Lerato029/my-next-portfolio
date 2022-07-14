@@ -9,6 +9,7 @@
     "now-build": "next build"
   },
   "dependencies": {
+    "@sendgrid/mail": "^7.7.0",
     "animejs": "3.2.1",
     "bootstrap": "5.0.0-beta3",
     "next": "10.2.0",

@@ -5,18 +5,8 @@ import Nav from "../components/Nav";
 import LandingSVG from "../components/LandingSVG";
 import Projects from "../components/Projects";
 export default function Home() {
+  //default list of projects
   const initialProjects = [
-    {
-      static: true,
-      img: "/weather.png",
-      bg: "bgYellow",
-      name2: "My Weather App",
-
-      description2:
-        "Website where one can get weather updates. Created with Next.js and uses the Open Weather API",
-      url2: "https://my-weather-ilixaqoit-lerato029.vercel.app/",
-      git2: "https://github.com/Lerato029/my-weather-app",
-    },
     {
       static: false,
       name: "Thabisa Baby House",
@@ -25,48 +15,46 @@ export default function Home() {
       url: "https://thabisa-baby-house.vercel.app/",
       description:
         "The Thabisa Baby House website is a full-stack MERN application using Next.js.",
-      img2: "/thabisa.png",
+      img: "/projects/thabisa.png",
       git: "https://github.com/Lerato029/thabisababyhouse",
     },
     {
       static: true,
-      img: "/memo.jpg",
-      bg: "bgRed",
-      name2: "Memory Emoji Game",
-      description2:
-        "This project was created using the Create React App. It is a good reference for learning how to manage state and using the React Router.",
-      url2: "https://emoji-memory-game.herokuapp.com/",
-      git2: "https://github.com/Lerato029/memory-game",
+      img: "/projects/hope.png",
+      bg: "bgYellow",
+      name: "Hope Academy",
+
+      description: "Catalogue Website for a school in Qqeberha South Africa",
+      url: "http://www.hopeacademy.co.za/",
     },
     {
       static: false,
-      name: "My Faves",
+      name: "Greatworth Properties",
 
       bg: "bgMint",
-      url: "https://frozen-headland-60618.herokuapp.com/",
+      url: "https://greatworthproperties.co.za/",
       description:
-        "React and Express App that allows you to create a bucket list of content from iTunes to iBooks.",
-      img2: "/faves.png",
-      git: "https://github.com/Lerato029/my-faves",
+        "WordPress website for a Real Estate Start-Up based in Gauteng South Africa.",
+      img: "/projects/GW.png",
     },
   ];
-  const [targetProjects, setTargetProjects] = useState();
   const [bgColour, setBgColour] = useState("#FDC128");
   const [projects, setProjects] = useState(initialProjects);
 
+  //project tags for tabs on project section
   const projectTags = [
     {
-      name: "fab fa-js-square",
+      name: "fa-solid fa-star",
       bg: "#FDC128",
       about: "recent",
     },
     {
-      name: "fas fa-palette",
+      name: "fa-solid fa-laptop-code",
       bg: "#16333F",
       about: "full-stack",
     },
     {
-      name: "fas fa-mobile-alt",
+      name: "fa-solid fa-laptop-code",
       bg: "#C81E2A",
       about: "demos",
     },
@@ -108,47 +96,77 @@ export default function Home() {
     switch (inputProjectTag) {
       case "recent":
         setBgColour(projectBg);
+        setProjects(initialProjects);
+        break;
+      case "full-stack":
+        setBgColour(projectBg);
         setProjects([
           {
             static: false,
             name: "Thabisa Baby House",
-
             bg: "bgDark",
             url: "https://thabisa-baby-house.vercel.app/",
             description:
               "The Thabisa Baby House website is a full-stack MERN application using Next.js.",
-            img2: "/thabisa.png",
+            img: "/projects/thabisa.png",
             git: "https://github.com/Lerato029/thabisababyhouse",
           },
           {
-            static: true,
-            img: "/weather.png",
-            bg: "bgYellow",
-            name2: "Hope Academy",
-
-            description2:
-              "Catalogue Website for a school in Qqeberha South Africa",
-            url2: "http://www.hopeacademy.co.za/",
-          },
-          {
             static: false,
-            name: "Greatworth Properties",
-
+            name: "My Faves",
             bg: "bgMint",
-            url: "https://greatworthproperties.co.za/",
+            url: "https://frozen-headland-60618.herokuapp.com/",
             description:
-              "WordPress website for a Real Estate Start-Up based in Gauteng South Africa.",
-            img2: "/thabisa.png",
+              "React and Express App that allows you to create a bucket list of content from iTunes to iBooks.",
+            img: "/projects/faves.png",
+            git: "https://github.com/Lerato029/my-faves",
           },
         ]);
         break;
-      case "full-stack":
-        setBgColour(projectBg);
-        setProjects([]);
-        break;
       case "demos":
         setBgColour(projectBg);
-        setProjects([]);
+        setProjects([
+          {
+            static: true,
+            img: "/projects/memo.jpg",
+            bg: "bgRed",
+            name: "Memory Emoji Game",
+            description:
+              "This project was created using the Create React App. It is a good reference for learning how to manage state and using the React Router.",
+            url: "https://emoji-memory-game.herokuapp.com/",
+            git: "https://github.com/Lerato029/memory-game",
+          },
+          {
+            static: false,
+            name: "My Faves",
+            bg: "bgMint",
+            url: "https://frozen-headland-60618.herokuapp.com/",
+            description:
+              "React and Express App that allows you to create a bucket list of content from iTunes to iBooks.",
+            img: "/projects/faves.png",
+            git: "https://github.com/Lerato029/my-faves",
+          },
+          {
+            static: true,
+            img: "/projects/weather.png",
+            bg: "bgYellow",
+            name: "My Weather App",
+            description:
+              "Website where one can get weather updates. Created with Next.js and uses the Open Weather API",
+            url: "https://my-weather-ilixaqoit-lerato029.vercel.app/",
+            git: "https://github.com/Lerato029/my-weather-app",
+          },
+          {
+            static: false,
+            name: "Thabisa Baby House",
+            bg: "bgDark",
+            url: "https://thabisa-baby-house.vercel.app/",
+            description:
+              "The Thabisa Baby House website is a full-stack MERN application using Next.js.",
+            img: "/projects/thabisa.png",
+            git: "https://github.com/Lerato029/thabisababyhouse",
+          },
+        ]);
         break;
       case "case studies":
         setBgColour(projectBg);

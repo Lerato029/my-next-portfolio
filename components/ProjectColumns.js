@@ -1,18 +1,11 @@
 import React from "react";
 
 export default function ProjectColumns({ project, index }) {
-  return (
-    <>
-      <div
-        key={index}
-        className={
-          project.static
-            ? `col-sm-3 mx-0 gx-0 middle ${project.bg} `
-            : `col-sm-9 mx-0 gx-0 prime ${project.bg}`
-        }
-      >
+  const ImageCard = () => {
+    return (
+      <div key={index} className={`col-sm-4 mx-0 gx-0 ${project.bg}`}>
         <div
-          className={`card text-white middle ${project.bg} `}
+          className={`card  text-white middle ${project.bg}`}
           style={{
             height: "15rem",
             borderRadius: "0",
@@ -31,7 +24,22 @@ export default function ProjectColumns({ project, index }) {
               }}
             />
           )}
+        </div>
+      </div>
+    );
+  };
 
+  const DetailsCard = () => {
+    return (
+      <div key={index} className={`col-sm-8 mx-0 gx-0 prime  ${project.bg}`}>
+        <div
+          className={`card  text-white middle ${project.bg}`}
+          style={{
+            height: "15rem",
+            borderRadius: "0",
+            border: "none",
+          }}
+        >
           <div className="card-img-overlay middle">
             {project.url && (
               <a
@@ -60,63 +68,22 @@ export default function ProjectColumns({ project, index }) {
           </div>
         </div>
       </div>
-      <div
-        key={index}
-        className={
-          project.static
-            ? `col-sm-9 mx-0 gx-0 prime  ${project.bg}`
-            : ` col-sm-3 mx-0 gx-0 ${project.bg}`
-        }
-      >
-        <div
-          className={`card  text-white middle ${project.bg}`}
-          style={{
-            height: "15rem",
-            borderRadius: "0",
-            border: "none",
-          }}
-        >
-          {project.img2 && (
-            <img
-              src={project.img2}
-              className="card-img"
-              alt={project.name2}
-              style={{
-                maxWidth: "100%",
-                maxHeight: "100%",
-                filter: "opacity(80%)",
-              }}
-            />
-          )}
+    );
+  };
 
-          <div className="card-img-overlay middle">
-            {project.url2 && (
-              <a
-                className="btn btn-outline"
-                href={`${project.url2}`}
-                target="_blank"
-              >
-                <h5
-                  className="card-title fw-bold "
-                  style={{
-                    cursor: "pointer",
-                  }}
-                >
-                  {project.name2}
-                </h5>
-              </a>
-            )}
-
-            <p className="px-3 fw-bold pt-2">{project.description2}</p>
-
-            {project.git2 && (
-              <a href={`${project.git2}`} target="_blank">
-                <i className="fab fa-github fs-4"></i>
-              </a>
-            )}
-          </div>
-        </div>
-      </div>
+  return (
+    <>
+      {index % 2 ? (
+        <>
+          <DetailsCard />
+          <ImageCard />
+        </>
+      ) : (
+        <>
+          <ImageCard />
+          <DetailsCard />
+        </>
+      )}
     </>
   );
 }

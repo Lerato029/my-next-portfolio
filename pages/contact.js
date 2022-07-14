@@ -112,7 +112,9 @@ export default function contact() {
               }}
             />
           </div>
-          <div className="col-md-6 opaqueBorder m-0">
+          <div
+            className={`col-md-6 opaqueBorder m-0 ${submitted ? "middle" : ""}`}
+          >
             {submitted ? (
               <h1 className="fw-bold textDark text-center mt-5">
                 Message Sent! <i className="fas fa-thumbs-up"></i>
