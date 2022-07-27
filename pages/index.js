@@ -1,32 +1,67 @@
 //Used for custom titles
 import Link from "next/link";
-import { useEffect } from "react";
+import { useState } from "react";
 import Nav from "../components/Nav";
+import LandingSVG from "../components/LandingSVG";
+import Projects from "../components/Projects";
 export default function Home() {
-  const me = [
+  //default list of projects
+  const initialProjects = [
     {
-      name: "fab fa-js-square",
+      static: false,
+      name: "Thabisa Baby House",
 
+      bg: "bgDark",
+      url: "https://thabisa-baby-house.vercel.app/",
+      description:
+        "The Thabisa Baby House website is a full-stack MERN application using Next.js.",
+      img: "/projects/thabisa.png",
+      git: "https://github.com/Lerato029/thabisababyhouse",
+    },
+    {
+      static: true,
+      img: "/projects/hope.png",
+      bg: "bgYellow",
+      name: "Hope Academy",
+
+      description: "Catalogue Website for a school in Qqeberha South Africa",
+      url: "http://www.hopeacademy.co.za/",
+    },
+    {
+      static: false,
+      name: "Greatworth Properties",
+
+      bg: "bgMint",
+      url: "https://greatworthproperties.co.za/",
+      description:
+        "WordPress website for a Real Estate Start-Up based in Gauteng South Africa.",
+      img: "/projects/GW.png",
+    },
+  ];
+  const [bgColour, setBgColour] = useState("#FDC128");
+  const [projects, setProjects] = useState(initialProjects);
+
+  //project tags for tabs on project section
+  const projectTags = [
+    {
+      name: "fa-solid fa-star",
       bg: "#FDC128",
-      about: "JavaScript",
+      about: "recent",
     },
     {
-      name: "fas fa-palette",
-
+      name: "fa-solid fa-laptop-code",
       bg: "#16333F",
-      about: "Art",
+      about: "full-stack",
     },
     {
-      name: "fas fa-mobile-alt",
-
+      name: "fa-solid fa-laptop-code",
       bg: "#C81E2A",
-      about: "Responsive Apps",
+      about: "demos",
     },
     {
       name: "fas fa-pencil-alt",
-      img: "/interfaces.svg",
       bg: "#6EC7AA",
-      about: "Design",
+      about: "case studies",
     },
   ];
 
@@ -57,6 +92,93 @@ export default function Home() {
     },
   ];
 
+  const handleContent = (inputProjectTag, projectBg) => {
+    switch (inputProjectTag) {
+      case "recent":
+        setBgColour(projectBg);
+        setProjects(initialProjects);
+        break;
+      case "full-stack":
+        setBgColour(projectBg);
+        setProjects([
+          {
+            static: false,
+            name: "Thabisa Baby House",
+            bg: "bgDark",
+            url: "https://thabisa-baby-house.vercel.app/",
+            description:
+              "The Thabisa Baby House website is a full-stack MERN application using Next.js.",
+            img: "/projects/thabisa.png",
+            git: "https://github.com/Lerato029/thabisababyhouse",
+          },
+          {
+            static: false,
+            name: "My Faves",
+            bg: "bgMint",
+            url: "https://frozen-headland-60618.herokuapp.com/",
+            description:
+              "React and Express App that allows you to create a bucket list of content from iTunes to iBooks.",
+            img: "/projects/faves.png",
+            git: "https://github.com/Lerato029/my-faves",
+          },
+        ]);
+        break;
+      case "demos":
+        setBgColour(projectBg);
+        setProjects([
+          {
+            static: true,
+            img: "/projects/memo.jpg",
+            bg: "bgRed",
+            name: "Memory Emoji Game",
+            description:
+              "This project was created using the Create React App. It is a good reference for learning how to manage state and using the React Router.",
+            url: "https://emoji-memory-game.herokuapp.com/",
+            git: "https://github.com/Lerato029/memory-game",
+          },
+          {
+            static: false,
+            name: "My Faves",
+            bg: "bgMint",
+            url: "https://frozen-headland-60618.herokuapp.com/",
+            description:
+              "React and Express App that allows you to create a bucket list of content from iTunes to iBooks.",
+            img: "/projects/faves.png",
+            git: "https://github.com/Lerato029/my-faves",
+          },
+          {
+            static: true,
+            img: "/projects/weather.png",
+            bg: "bgYellow",
+            name: "My Weather App",
+            description:
+              "Website where one can get weather updates. Created with Next.js and uses the Open Weather API",
+            url: "https://my-weather-ilixaqoit-lerato029.vercel.app/",
+            git: "https://github.com/Lerato029/my-weather-app",
+          },
+          {
+            static: false,
+            name: "Thabisa Baby House",
+            bg: "bgDark",
+            url: "https://thabisa-baby-house.vercel.app/",
+            description:
+              "The Thabisa Baby House website is a full-stack MERN application using Next.js.",
+            img: "/projects/thabisa.png",
+            git: "https://github.com/Lerato029/thabisababyhouse",
+          },
+        ]);
+        break;
+      case "case studies":
+        setBgColour(projectBg);
+        setProjects([]);
+        break;
+
+      default:
+        setBgColour("#FDC128");
+        setProjects(initialProjects);
+    }
+  };
+
   return (
     <>
       <head>
@@ -65,30 +187,23 @@ export default function Home() {
       <div className="row row-cols-1 row-cols-md-1 gx-0 m-0">
         <div className="col m-0 gx-0 ">
           <div
-            className="card  text-white "
+            className="card text-white "
             style={{
               height: "100%",
               width: "100%",
               borderRadius: "0",
             }}
           >
-            <img
-              src={"/land.svg"}
-              className="card-img"
-              alt={""}
-              style={{
-                background: "#FDC128",
-              }}
-            />
+            <LandingSVG />
           </div>
         </div>
       </div>
 
       <Nav />
 
-      <div className="row row-cols-1 row-cols-md-2  m-2">
-        <div className="col-md-3">
-          <div className="profilePic m-2 ">
+      <div className="row  row-cols-1 row-cols-md-2  m-2">
+        <div className="col-md-3 middle">
+          <div className="profilePic middle">
             <img
               className="img-fluid "
               src="/logo.svg"
@@ -97,9 +212,9 @@ export default function Home() {
           </div>
         </div>
         <div className="col-md-9">
-          <p className=" mx-2 fs-5  mt-3">
-            Hi, my name is Lerato Mokgwabona. I'm an entry level Full-Stack Web
-            Developer mostly interesting in the client logic of applications. I
+          <p className="pr-2 fs-5 mt-3 maxWidthTxt">
+            Hi, my name is Lerato Mokgwabona. I'm an entry level Front-end
+            Developer passionate about the client logic behind applications. I
             enjoy solving problems, coding, design and art. I come from an
             Architectural background however, have been fascinated by the tech
             industry, the virtual platforms created to improve the way we live
@@ -120,50 +235,52 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="row row-cols-1 row-cols-md-4  m-0">
-        {me.map((details) => (
-          <div key={details.name} className="col mx-0 gx-0 ">
+      {/* Projects Sections */}
+      <div className="row m-0">
+        {projectTags.map((details) => (
+          <div key={details.name} className="col mx-0 gx-0 px14">
             <div
-              className="card  text-white "
+              className="text-white middle pointer"
+              onClick={() => handleContent(details.about, details.bg)}
               style={{
                 background: `${details.bg}`,
-                height: "21rem",
+                maxHeight: "21rem",
                 borderRadius: "0",
                 border: "none",
               }}
             >
-              <div className="card-text text-center mt-5">
-                <h1 className="card-title mt-5 " style={{ cursor: "pointer" }}>
+              <div className="text-center my-3 middle">
+                <h1 style={{ cursor: "pointer" }}>
                   <i className={`${details.name}`}></i>
                 </h1>
-                <h5>{details.about}</h5>
+                <h5 className="text-capitalize">{details.about}</h5>
               </div>
             </div>
           </div>
         ))}
       </div>
-      <div className="row row-cols-1 row-cols-md-1 gx-0 m-0">
-        <div className="col m-0 gx-0 ">
-          <div
-            className="card  text-white landing"
-            style={{
-              height: "120vh",
-              width: "100%",
-              borderRadius: "0",
-              background: "#FDC128",
-              border: "none",
-            }}
-          >
-            <Link href="/projects">
-              <button className="btn btn-success fw-bold text-uppercase">
-                <h5>view projects</h5>
-              </button>
-            </Link>
-          </div>
+      <div
+        className="row row-cols-1 row-cols-md-1 gx-0 m-0 scrollSection"
+        style={{
+          background: `${bgColour}`,
+        }}
+      >
+        <div className="col m-0 gx-0 text-white ">
+          {projects.length === 0 ? (
+            <div className="middle w-100 h-100">
+              <h2 class="mx-auto">Coming Soon...</h2>
+            </div>
+          ) : (
+            <div className="projectsSections px14rem mt-5">
+              <Projects projects={projects} />
+            </div>
+          )}
         </div>
       </div>
-      <div className="landing">
-        <h2 className="mb-5">Recent Blogs</h2>
+
+      {/* Blog Sections */}
+      <div className="my-5 middle">
+        <h2>Recent Blogs</h2>
       </div>
       <div className="container text-center">
         <div className="row row-cols-1 row-cols-md-2  ">
@@ -203,23 +320,16 @@ export default function Home() {
         </div>
       </div>
       <div className="landing">
-        <div
-          class="btn-group"
-          role="group"
-          aria-label="Basic mixed styles example"
-          style={{ borderRadius: "2% 0 0 2%" }}
-        >
-          <Link href="/about">
-            <button type="button" className="btn btn-info fw-bold">
-              Learn More
-            </button>
-          </Link>
-          <Link href="/contact">
-            <button type="button" className="btn btn-success fw-bold">
-              Contact Me
-            </button>
-          </Link>
-        </div>
+        <Link href="/about">
+          <button type="button" className="btn btn-info fw-bold">
+            Learn More
+          </button>
+        </Link>
+        <Link href="/contact">
+          <button type="button" className="btn btn-success fw-bold my-5">
+            Contact Me
+          </button>
+        </Link>
       </div>
 
       <style jsx>

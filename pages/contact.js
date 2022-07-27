@@ -2,7 +2,10 @@ import { useState } from "react";
 import Nav from "../components/Nav";
 import Loading from "../components/Loading";
 import Toast from "../components/Toast";
+import ReCAPTCHA from "react-google-recaptcha";
 
+const API_KEY = process.env.NEXT_PUBLIC_RECAPTURE_CLIENT;
+console.log("API_KEY", API_KEY);
 export default function contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -34,6 +37,10 @@ export default function contact() {
       details: "+27685013203",
     },
   ];
+
+  function onChange(value) {
+    console.log("Captcha value:", value);
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -112,7 +119,9 @@ export default function contact() {
               }}
             />
           </div>
-          <div className="col-md-6 opaqueBorder m-0">
+          <div
+            className={`col-md-6 opaqueBorder m-0 ${submitted ? "middle" : ""}`}
+          >
             {submitted ? (
               <h1 className="fw-bold textDark text-center mt-5">
                 Message Sent! <i className="fas fa-thumbs-up"></i>
@@ -163,6 +172,7 @@ export default function contact() {
                 <button type="submit" className="btn btn-success px-4 my-4">
                   Submit
                 </button>
+                <ReCAPTCHA sitekey={"API_KEY"} onChange={onChange} />
               </>
             )}
           </div>

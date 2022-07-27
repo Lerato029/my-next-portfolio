@@ -7,33 +7,29 @@ export default function Footer() {
         </h1>
       </a>
       <ul className="socialMedia fw-bold mt-5">
-        <li title="Github">
-          <div>
-            <a href="https://github.com/Lerato029" target="_blank">
-              <i className="fab fa-github "></i>
-              <br />
-            </a>
-          </div>
-        </li>
-
-        <li title="LinkedIn">
-          <a
-            href="https://www.linkedin.com/in/lerato-mokgwabona-97107a16b/"
-            target="_blank"
-          >
+        <a href="https://github.com/Lerato029" target="_blank">
+          <li title="Github">
+            <i className="fab fa-github "></i>
+          </li>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/lerato-mokgwabona-97107a16b/"
+          target="_blank"
+        >
+          <li title="LinkedIn">
             <i className="fab fa-linkedin-in"></i>
-          </a>
-        </li>
-        <li title="Instagram">
-          <a href="https://www.instagram.com/leratolatech/" target="_blank">
+          </li>
+        </a>
+        <a href="https://www.instagram.com/leratolatech/" target="_blank">
+          <li title="Instagram">
             <i className="fab fa-instagram"></i>
-          </a>
-        </li>
-        <li title="Dribble">
-          <a href="https://dribbble.com/UI_ByLerato" target="_blank">
+          </li>
+        </a>
+        <a href="https://dribbble.com/UI_ByLerato" target="_blank">
+          <li title="Dribble">
             <i className="fas fa-basketball-ball"></i>
-          </a>
-        </li>
+          </li>
+        </a>
       </ul>
     </div>
   );

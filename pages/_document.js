@@ -5,7 +5,15 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <meta name="description" content="Portfolio" />
+          <meta
+            name="description"
+            content="Developer and Design Portfolio Website by Lerato Mokgwabona"
+          />
+          <meta name="robots" content="index, follow" />
+          <meta
+            name="keywords"
+            content="Front-End Developer, UX/UI Designer, South Africa, Lerato Mokgwabona, South African Front-End Developer"
+          />
           <link rel="shortcut icon" href="/favicon.ico" />
 
           <link
@@ -14,8 +22,8 @@ export default class MyDocument extends Document {
           />
           <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
           <script
-            src="https://kit.fontawesome.com/1938f1a8f2.js"
-            crossorigin="anonymous"
+            src="https://kit.fontawesome.com/b3aaa53a92.js"
+            crossOrigin="anonymous"
           ></script>
           {/* Global Site Tag (gtag.js) - Google Analytics */}
           <script
