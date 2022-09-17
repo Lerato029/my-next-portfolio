@@ -54,16 +54,16 @@ export default function contact() {
     }).then((res) => {
       console.log(res);
       console.log("Response received");
-      if (res.status === 200) {
-        setLoading(false);
-        setSubmitted(true);
-        setName("");
-        setEmail("");
-        setMessage("");
-      } else {
-        setLoading(false);
-        setNotify("show");
-      }
+      // if (res.status === 200) {
+      //   setLoading(false);
+      //   setSubmitted(true);
+      //   setName("");
+      //   setEmail("");
+      //   setMessage("");
+      // } else {
+      setLoading(false);
+      setNotify("show");
+      // }
     });
   };
   return (
@@ -165,7 +165,6 @@ export default function contact() {
                 <button type="submit" className="btn btn-success px-4 my-4">
                   Submit
                 </button>
-                <ReCAPTCHA sitekey={"API_KEY"} onChange={onChange} />
               </>
             )}
           </div>
