@@ -18,6 +18,7 @@ export default function Home() {
       img: "/projects/thabisa.png",
       git: "https://github.com/Lerato029/thabisababyhouse",
     },
+
     {
       static: true,
       img: "/projects/hope.png",
@@ -170,7 +171,17 @@ export default function Home() {
         break;
       case "case studies":
         setBgColour(projectBg);
-        setProjects([]);
+        setProjects([
+          {
+            static: true,
+            img: "/projects/case.png",
+            bg: "bgDark",
+            name: "Cherry Lane Cakery App",
+            description:
+              "This is a case study I conducted for a local cake ordering app",
+            url: "https://coursera-assessments.s3.amazonaws.com/assessments/1663436643571/a044849c-f5a0-4c4b-9843-b5e185ad6f05/case%20study.pdf",
+          },
+        ]);
         break;
 
       default:
@@ -253,7 +264,7 @@ export default function Home() {
                 <h1 style={{ cursor: "pointer" }}>
                   <i className={`${details.name}`}></i>
                 </h1>
-                <h5 className="text-capitalize">{details.about}</h5>
+                <h5 className="text-capitalize tabs-home">{details.about}</h5>
               </div>
             </div>
           </div>
