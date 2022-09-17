@@ -29,13 +29,6 @@ export default function contact() {
       label: "location",
       details: "germiston, south africa",
     },
-    {
-      name: "fas fa-phone-square-alt",
-
-      bg: "#C81E2A",
-      label: "phone",
-      details: "+27685013203",
-    },
   ];
 
   function onChange(value) {
@@ -84,7 +77,7 @@ export default function contact() {
       <div className="container-fluid landing ">
         <h2 className="mb-5 text-center">Contact Details</h2>
       </div>
-      <div className="row row-cols-1 row-cols-md-3 m-0 ">
+      <div className="row row-cols-1 row-cols-md-2 m-0 ">
         {contact.map((info) => (
           <div key={info.name} className="col mx-0 gx-0 prime">
             <div

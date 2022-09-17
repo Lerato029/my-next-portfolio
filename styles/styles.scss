@@ -19,12 +19,8 @@
 @import './_loading.scss';
 @import './_landingSvg.scss';
 
-.middle {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
+
+
 
 .card {
     border-radius: 0;
@@ -52,7 +48,6 @@ a:hover {
 
 .navbar {
     background: $aqua;
-    height: 14vh !important;
 }
 
 .active {
