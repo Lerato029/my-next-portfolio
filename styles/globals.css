@@ -16,4 +16,10 @@ a {
   box-sizing: border-box;
 }
 
+@media screen and (max-width: 768px) {
+  .tabs-home{
+      font-size: 8px !important;
+  }
+}
+
 @import url("./styles.css");
