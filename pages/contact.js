@@ -3,10 +3,11 @@ import Nav from "../components/Nav";
 import Loading from "../components/Loading";
 import Toast from "../components/Toast";
 import ReCAPTCHA from "react-google-recaptcha";
-
+import Head from "next/head";
+import Image from "next/image";
 const API_KEY = process.env.NEXT_PUBLIC_RECAPTURE_CLIENT;
 console.log("API_KEY", API_KEY);
-export default function contact() {
+export default function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -44,33 +45,33 @@ export default function contact() {
       message,
     };
 
-    fetch("/api/contact", {
-      method: "POST",
-      headers: {
-        Accept: "application/json, text/plain, */*",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    }).then((res) => {
-      console.log(res);
-      console.log("Response received");
-      // if (res.status === 200) {
-      //   setLoading(false);
-      //   setSubmitted(true);
-      //   setName("");
-      //   setEmail("");
-      //   setMessage("");
-      // } else {
-      setLoading(false);
-      setNotify("show");
-      // }
-    });
+    // fetch("/api/contact", {
+    //   method: "POST",
+    //   headers: {
+    //     Accept: "application/json, text/plain, */*",
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify(data),
+    // }).then((res) => {
+    console.log(res);
+    console.log("Response received");
+    // if (res.status === 200) {
+    //   setLoading(false);
+    //   setSubmitted(true);
+    //   setName("");
+    //   setEmail("");
+    //   setMessage("");
+    // } else {
+    setLoading(false);
+    setNotify("show");
+    // }
+    // });
   };
   return (
     <div>
-      <head>
+      <Head>
         <title>Contact</title>
-      </head>
+      </Head>
       {loading && <Loading />}
       <Toast notify={notify} setNotify={() => setNotify("")} />
       <Nav />
@@ -102,7 +103,7 @@ export default function contact() {
       <div className="container mt-5">
         <form className="row" onSubmit={handleSubmit}>
           <div className="col-md-6  opaque">
-            <img
+            <Image
               src="/table.svg"
               className="card-img slide-top"
               alt="email me"

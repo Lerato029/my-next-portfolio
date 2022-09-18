@@ -1,9 +1,9 @@
-import nodemailer from "nodemailer";
 import mail from "@sendgrid/mail";
 mail.setApiKey(process.env.SENDGRID_API_KEY);
 //object storing information on how we want to send our emails
 //PORT 465 FOR SMTP communication
-export default async (req, res) => {
+
+export default async function (req, res) {
   /* let nodemailer = require("nodemailer"); */
   const body = req.body;
 
@@ -24,4 +24,4 @@ export default async (req, res) => {
   mail.send(data);
 
   res.status(200).json({ msg: "great!" });
-};
+}

@@ -1,5 +1,5 @@
 import React from "react";
-
+import Image from "next/image";
 export default function ProjectColumns({ project, index }) {
   const ImageCard = () => {
     return (
@@ -13,7 +13,7 @@ export default function ProjectColumns({ project, index }) {
           }}
         >
           {project.img && (
-            <img
+            <Image
               src={project.img}
               className="card-img"
               alt={project.name}
@@ -46,6 +46,7 @@ export default function ProjectColumns({ project, index }) {
                 className="btn btn-outline"
                 href={`${project.url}`}
                 target="_blank"
+                rel="noreferrer"
               >
                 <h5
                   className="card-title fw-bold "
@@ -61,7 +62,7 @@ export default function ProjectColumns({ project, index }) {
             <p className="px-3 fw-bold pt-2">{project.description}</p>
 
             {project.git && (
-              <a href={`${project.git}`} target="_blank">
+              <a href={`${project.git}`} target="_blank" rel="noreferrer">
                 <i className="fab fa-github fs-4"></i>
               </a>
             )}

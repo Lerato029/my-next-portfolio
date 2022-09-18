@@ -4,6 +4,8 @@ import { useState } from "react";
 import Nav from "../components/Nav";
 import LandingSVG from "../components/LandingSVG";
 import Projects from "../components/Projects";
+import Head from "next/head";
+import Image from "next/image";
 export default function Home() {
   //default list of projects
   const initialProjects = [
@@ -192,9 +194,9 @@ export default function Home() {
 
   return (
     <>
-      <head>
+      <Head>
         <title>Home</title>
-      </head>
+      </Head>
       <div className="row row-cols-1 row-cols-md-1 gx-0 m-0">
         <div className="col m-0 gx-0 ">
           <div
@@ -215,7 +217,7 @@ export default function Home() {
       <div className="row  row-cols-1 row-cols-md-2  m-2">
         <div className="col-md-3 middle">
           <div className="profilePic middle">
-            <img
+            <Image
               className="img-fluid "
               src="/logo.svg"
               alt="Picture of the author"
@@ -305,7 +307,7 @@ export default function Home() {
                   borderRadius: "0",
                 }}
               >
-                <img
+                <Image
                   src={blog.img}
                   className="card-img"
                   alt={blog.name}
@@ -316,7 +318,7 @@ export default function Home() {
                 />
 
                 <div className="card-img-overlay">
-                  <a href={`${blog.url}`} target="_blank">
+                  <a href={`${blog.url}`} target="_blank" rel="noreferrer">
                     <h5
                       className="card-title  text-start"
                       style={{ cursor: "pointer" }}

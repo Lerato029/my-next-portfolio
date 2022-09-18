@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Nav from "../components/Nav";
-
+import Head from "next/head";
+import Image from "next/image";
 import { useState } from "react";
 
 export default function about() {
@@ -97,9 +98,9 @@ export default function about() {
 
   return (
     <div>
-      <head>
+      <Head>
         <title>About</title>
-      </head>
+      </Head>
       <Nav />
       <div
         className="card  text-white landing bgDark"
@@ -110,7 +111,7 @@ export default function about() {
           border: "none",
         }}
       >
-        <img
+        <Image
           className="card-img"
           src="/about.svg"
           style={{
@@ -163,7 +164,7 @@ export default function about() {
               borderRadius: "0",
             }}
           >
-            <img
+            <Image
               src={"/grad.svg"}
               className="card-img slide-left"
               alt={"img"}
@@ -259,7 +260,7 @@ export default function about() {
               borderRadius: "0",
             }}
           >
-            <img
+            <Image
               src={"/work.svg"}
               className="card-img slide-top"
               alt={"img"}
@@ -280,7 +281,7 @@ export default function about() {
               borderRadius: "0",
             }}
           >
-            <img
+            <Image
               src={"/skills.svg"}
               className="card-img slide-left"
               alt={"img"}

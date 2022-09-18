@@ -5,23 +5,21 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "now-build": "next build"
+    "start": "next start"
   },
   "dependencies": {
     "@sendgrid/mail": "^7.7.0",
     "animejs": "3.2.1",
     "bootstrap": "5.0.0-beta3",
     "caniuse-lite": "^1.0.30001367",
-    "next": "10.2.0",
+    "next": "^12.3.0",
     "nodemailer": "6.6.3",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "react-google-recaptcha": "^2.1.0",
-    "react-rellax": "1.0.3",
-    "rellax": "1.12.1"
+    "react-google-recaptcha": "^2.1.0"
   },
   "devDependencies": {
-    "@types/animejs": "3.1.4"
+    "eslint": "8.23.1",
+    "eslint-config-next": "12.3.0"
   }
 }
