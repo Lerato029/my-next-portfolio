@@ -215,14 +215,23 @@ export default function Home() {
       <Nav />
 
       <div className="row  row-cols-1 row-cols-md-2  m-2">
-        <div className="col-md-3 middle">
-          <div className="profilePic middle">
-            <Image
-              className="img-fluid "
-              src="/logo.svg"
-              alt="Picture of the author"
-            />
-          </div>
+        <div
+          className="col-md-3 middle card"
+          style={{
+            height: "21rem",
+            borderRadius: "0",
+          }}
+        >
+          <Image
+            layout="fill"
+            src="/logo.svg"
+            className="card-img"
+            alt="Lerato mokgwabona"
+            style={{
+              maxWidth: "100%",
+              maxHeight: "100%",
+            }}
+          />
         </div>
         <div className="col-md-9">
           <p className="pr-2 fs-5 mt-3 maxWidthTxt">
@@ -308,6 +317,7 @@ export default function Home() {
                 }}
               >
                 <Image
+                  layout="fill"
                   src={blog.img}
                   className="card-img"
                   alt={blog.name}

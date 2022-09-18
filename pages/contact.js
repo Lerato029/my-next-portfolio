@@ -103,11 +103,18 @@ export default function Contact() {
       </div>
       <div className="container mt-5">
         <form className="row" onSubmit={handleSubmit}>
-          <div className="col-md-6  opaque">
+          <div
+            className="col-md-6 middle card"
+            style={{
+              height: "21rem",
+              borderRadius: "0",
+            }}
+          >
             <Image
+              layout="fill"
               src="/table.svg"
               className="card-img slide-top"
-              alt="email me"
+              alt="Lerato mokgwabona"
               style={{
                 maxWidth: "100%",
                 maxHeight: "100%",

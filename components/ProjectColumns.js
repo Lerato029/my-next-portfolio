@@ -14,6 +14,7 @@ export default function ProjectColumns({ project, index }) {
         >
           {project.img && (
             <Image
+              layout="fill"
               src={project.img}
               className="card-img"
               alt={project.name}

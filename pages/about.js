@@ -112,6 +112,7 @@ export default function About() {
         }}
       >
         <Image
+          layout="fill"
           className="card-img"
           src="/about.svg"
           style={{
@@ -165,6 +166,7 @@ export default function About() {
             }}
           >
             <Image
+              layout="fill"
               src={"/grad.svg"}
               className="card-img slide-left"
               alt={"img"}
@@ -261,6 +263,7 @@ export default function About() {
             }}
           >
             <Image
+              layout="fill"
               src={"/work.svg"}
               className="card-img slide-top"
               alt={"img"}
@@ -282,6 +285,7 @@ export default function About() {
             }}
           >
             <Image
+              layout="fill"
               src={"/skills.svg"}
               className="card-img slide-left"
               alt={"img"}

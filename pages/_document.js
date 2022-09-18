@@ -25,11 +25,11 @@ export default class MyDocument extends Document {
             id="bootstrap"
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
           ></Script>
-          <Script
+          <script
             id="fontawesome"
             src="https://kit.fontawesome.com/b3aaa53a92.js"
             crossOrigin="anonymous"
-          ></Script>
+          ></script>
           {/* Global Site Tag (gtag.js) - Google Analytics */}
           <Script
             id="google analytics"
