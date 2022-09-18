@@ -7,6 +7,7 @@ import Head from "next/head";
 import Image from "next/image";
 const API_KEY = process.env.NEXT_PUBLIC_RECAPTURE_CLIENT;
 console.log("API_KEY", API_KEY);
+
 export default function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
