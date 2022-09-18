@@ -4,7 +4,7 @@ import Head from "next/head";
 import Image from "next/image";
 import { useState } from "react";
 
-export default function about() {
+export default function About() {
   //Arrays - used for rendering data through the map() method
   const [info, setInfo] = useState({
     company: "_",

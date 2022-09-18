@@ -21,16 +21,22 @@ export default class MyDocument extends Document {
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
             rel="stylesheet"
           />
-          <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></Script>
           <Script
+            id="bootstrap"
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+          ></Script>
+          <Script
+            id="fontawesome"
             src="https://kit.fontawesome.com/b3aaa53a92.js"
             crossOrigin="anonymous"
           ></Script>
           {/* Global Site Tag (gtag.js) - Google Analytics */}
           <Script
+            id="google analytics"
             src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
           />
           <Script
+            id="google analytics"
             dangerouslySetInnerHTML={{
               __html: `
             window.dataLayer = window.dataLayer || [];
@@ -42,9 +48,6 @@ export default class MyDocument extends Document {
           `,
             }}
           />
-          <Script
-            src={`https://www.paypal.com/sdk/js?client-id=${process.env.PAYPAL_CLIENT_ID}`}
-          ></Script>
         </Head>
         <body>
           <Main />
