@@ -198,7 +198,7 @@ export default function Home() {
             bg: "bgDark",
             name: "The PleatMeal App",
             description:
-              "he PleatMeal App is an app created to help people who wish to incorporate more balanced meals throughout their days with the limitations of having very little time to prepare these meals.",
+              "The PleatMeal App is an app created to help people who wish to incorporate more balanced meals throughout their days with the limitations of having very little time to prepare these meals.",
             url: "https://coursera-assessments.s3.amazonaws.com/assessments/1688808444611/39cd17ec-205e-4ae1-afff-377ded8cfe68/Pleat%20App.pdf",
           },
         ]);
@@ -254,20 +254,30 @@ export default function Home() {
         <div className="col-md-9">
           <p className="pr-2 fs-5 mt-3 maxWidthTxt">
             Hi, my name is Lerato Mokgwabona. I'm an entry level Front-end
-            Developer passionate about the client logic behind applications. I
-            enjoy solving problems, coding, design and art. I come from an
-            Architectural background however, have been fascinated by the tech
-            industry, the virtual platforms created to improve the way we live
-            in reality. I love the freedom to create anything I can think of. So
-            I took the opportunity to learn the skills to become a participant
-            in the industry. I look forward to working along side other
-            developers, UX and UI designers to create platforms that provide the
-            best experience for the users and be a part of the community of
-            developers who create platforms that connect people. See how to
-            contact me{" "}
+            Developer and UX/UI designer in training. I'm passionate about the
+            client logic behind applications and designing virtual products that
+            provide a pleasant and useful User Experience for people. I enjoy
+            solving problems, design and art. I come from an Architectural
+            background however, have been fascinated by the tech industry, the
+            virtual platforms created to improve the way we live in reality. I
+            love the freedom to create anything I can think of. So I took the
+            opportunity to learn the skills to become a participant in the
+            industry. I look forward to working along side other developers, UX
+            and UI designers to create platforms that provide the best
+            experience for the users and be a part of the community of
+            developers who create platforms that connect people. See how to{" "}
             <Link href="/contact">
               <a className="fw-bold " style={{ color: "#c81e2a" }}>
-                here
+                contact me here
+              </a>
+            </Link>{" "}
+            or{" "}
+            <Link
+              href="https://drive.google.com/file/d/12ZDvXANhsIKR2YIYg5Y3QotcxpXLG7xi/view?usp=sharing"
+              target="_blank"
+            >
+              <a className="fw-bold " style={{ color: "#c81e2a" }}>
+                view my resume here
               </a>
             </Link>
             .
