@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function ProjectColumns({ project, index }) {
   const ImageCard = () => {
     return (
-      <div key={index} className={`col-sm-4 mx-0 gx-0 ${project.bg}`}>
+      <div key={index} className={`col-sm-3 mx-0 gx-0 ${project.bg}`}>
         <div
           className={`card  text-white middle ${project.bg}`}
           style={{
@@ -32,7 +32,7 @@ export default function ProjectColumns({ project, index }) {
 
   const DetailsCard = () => {
     return (
-      <div key={index} className={`col-sm-8 mx-0 gx-0 prime  ${project.bg}`}>
+      <div key={index} className={`col-sm-9 mx-0 gx-0 prime  ${project.bg}`}>
         <div
           className={`card  text-white middle ${project.bg}`}
           style={{

@@ -177,11 +177,29 @@ export default function Home() {
           {
             static: true,
             img: "/projects/case.png",
-            bg: "bgDark",
+            bg: "bgMint",
             name: "Cherry Lane Cakery App",
             description:
               "This is a case study I conducted for a local cake ordering app",
             url: "https://coursera-assessments.s3.amazonaws.com/assessments/1663436643571/a044849c-f5a0-4c4b-9843-b5e185ad6f05/case%20study.pdf",
+          },
+          {
+            static: true,
+            img: "/projects/hairelated.png",
+            bg: "bgYellow",
+            name: "HairElated",
+            description:
+              "The HairElated Website is a platform that gives people with textured hair the resources they need to maintain and embrace their natural hair.",
+            url: "https://coursera-assessments.s3.amazonaws.com/assessments/1674585436604/f42feeec-e34d-4894-a680-e7f888329c3c/HairElated%20Website.pdf",
+          },
+          {
+            static: true,
+            img: "/projects/pleatmeal.png",
+            bg: "bgDark",
+            name: "The PleatMeal App",
+            description:
+              "he PleatMeal App is an app created to help people who wish to incorporate more balanced meals throughout their days with the limitations of having very little time to prepare these meals.",
+            url: "https://coursera-assessments.s3.amazonaws.com/assessments/1688808444611/39cd17ec-205e-4ae1-afff-377ded8cfe68/Pleat%20App.pdf",
           },
         ]);
         break;
