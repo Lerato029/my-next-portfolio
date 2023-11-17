@@ -29,7 +29,7 @@ export default function Contact() {
 
       bg: "#16333F",
       label: "location",
-      details: "germiston, south africa",
+      details: "Midrand, South Africa",
     },
   ];
 
@@ -95,7 +95,7 @@ export default function Contact() {
                 <h1 className=" mt-5 " style={{ cursor: "pointer" }}>
                   <i className={`${info.name}`}></i>
                 </h1>
-                <h5 className="text-capitalize">{info.details}</h5>
+                <h5 className="">{info.details}</h5>
               </div>
             </div>
           </div>

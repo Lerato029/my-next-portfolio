@@ -27,6 +27,7 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 50px;
+  cursor: pointer;
 }
 
 .socialMedia small {
@@ -47,6 +48,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 
 .socialMedia a {
@@ -59,9 +61,7 @@
   text-decoration: none;
   background-color: $mustard;
   /* animation called */
-  animation-name: bounce;
-  animation-timing-function: ease;
-  animation-duration: 3s;
+
   /*  animation-iteration-count: infinite; */
 }
 

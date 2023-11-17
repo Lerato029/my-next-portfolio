@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Nav from "../components/Nav";
 import Head from "next/head";
-import Image from "next/image";
+import Image from "react-bootstrap/Image";
 import { useState } from "react";
 
 export default function About() {
@@ -112,7 +112,7 @@ export default function About() {
         }}
       >
         <Image
-          layout="fill"
+          alt="about image"
           className="card-img"
           src="/about.svg"
           style={{
@@ -166,7 +166,6 @@ export default function About() {
             }}
           >
             <Image
-              layout="fill"
               src={"/grad.svg"}
               className="card-img slide-left"
               alt={"img"}
@@ -187,7 +186,9 @@ export default function About() {
             title={"Education Background"}
           >
             <h2 className="card-title  text-white text-center">Education</h2>
+
             <button
+              disabled
               className="btn btn-success m-5 fw-bold w-75"
               type="button"
               data-bs-toggle="offcanvas"
@@ -197,25 +198,14 @@ export default function About() {
             >
               <h4>HyperionDev</h4>
             </button>
-            <button
-              className="btn btn-success m-5 fw-bold w-75"
-              type="button"
-              data-bs-toggle="offcanvas"
-              data-bs-target="#offcanvasExample"
-              aria-controls="offcanvasExample"
-              onClick={() => handleInfo("wits")}
-            >
+            <button disabled className="btn btn-success m-5 fw-bold w-75">
+              <h4>Goolgle UX/UI Certificate</h4>
+            </button>
+            <button disabled className="btn btn-success m-5 fw-bold w-75">
               <h4>Wits University </h4>
             </button>
-            <button
-              className="btn btn-success m-5 fw-bold w-75"
-              type="button"
-              data-bs-toggle="offcanvas"
-              data-bs-target="#offcanvasExample"
-              aria-controls="offcanvasExample"
-              onClick={() => handleInfo("catherine")}
-            >
-              <h4>St Catherine's High School</h4>
+            <button disabled className="btn btn-success m-5 fw-bold w-75">
+              <h4>St Catherine's High School </h4>
             </button>
           </div>
         </div>
@@ -232,24 +222,16 @@ export default function About() {
             title={"Experience"}
           >
             <h3 className="card-title  text-white text-center">Experience</h3>
-            <button
-              className="btn btn-success m-5 fw-bold w-75"
-              type="button"
-              data-bs-toggle="offcanvas"
-              data-bs-target="#offcanvasExample"
-              aria-controls="offcanvasExample"
-              onClick={() => handleInfo("greenSpace")}
-            >
+            <button disabled className="btn btn-success m-5 fw-bold w-75">
+              <h4>Verify Dynamics</h4>
+            </button>
+            <button disabled className="btn btn-success m-5 fw-bold w-75">
+              <h4>Microsoft AppFactory</h4>
+            </button>
+            <button disabled className="btn btn-success m-5 fw-bold w-75">
               <h4>Greenspace Studio</h4>
             </button>
-            <button
-              className="btn btn-success m-5 fw-bold w-75"
-              type="button"
-              data-bs-toggle="offcanvas"
-              data-bs-target="#offcanvasExample"
-              aria-controls="offcanvasExample"
-              onClick={() => handleInfo("thuso")}
-            >
+            <button disabled className="btn btn-success m-5 fw-bold w-75">
               <h4>Thuso Architects</h4>
             </button>
           </div>

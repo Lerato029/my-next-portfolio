@@ -8,12 +8,12 @@ export default class MyDocument extends Document {
         <Head>
           <meta
             name="description"
-            content="Developer and Design Portfolio Website by Lerato Mokgwabona"
+            content="Developer and Design Portfolio Website by Lerato Nyalungu"
           />
           <meta name="robots" content="index, follow" />
           <meta
             name="keywords"
-            content="Front-End Developer, UX/UI Designer, South Africa, Lerato Mokgwabona, South African Front-End Developer"
+            content="Front-End Developer, UX/UI Designer, South Africa, Lerato Nyalungu, South African Front-End Developer"
           />
           <link rel="shortcut icon" href="/favicon.ico" />
 
@@ -25,11 +25,11 @@ export default class MyDocument extends Document {
             id="bootstrap"
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
           ></Script>
-          <script
+          <Script
             id="fontawesome"
             src="https://kit.fontawesome.com/b3aaa53a92.js"
             crossOrigin="anonymous"
-          ></script>
+          ></Script>
           {/* Global Site Tag (gtag.js) - Google Analytics */}
           <Script
             id="google analytics"

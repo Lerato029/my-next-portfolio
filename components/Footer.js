@@ -1,3 +1,11 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faGithub,
+  faLinkedin,
+  faInstagram,
+  faDribbble,
+} from "@fortawesome/free-brands-svg-icons";
+
 export default function Footer() {
   return (
     <div className="mt-5">
@@ -9,25 +17,25 @@ export default function Footer() {
       <ul className="socialMedia fw-bold mt-5">
         <a href="https://github.com/Lerato029" target="_blank" rel="noreferrer">
           <li title="Github">
-            <i className="fab fa-github "></i>
+            <FontAwesomeIcon icon={faGithub} />
           </li>
         </a>
         <a
-          href="https://www.linkedin.com/in/lerato-mokgwabona-97107a16b/"
+          href="https://www.linkedin.com/in/lerato-m/"
           target="_blank"
           rel="noreferrer"
         >
           <li title="LinkedIn">
-            <i className="fab fa-linkedin-in"></i>
+            <FontAwesomeIcon icon={faLinkedin} />
           </li>
         </a>
         <a
-          href="https://www.instagram.com/leratolatech/"
+          href="https://www.instagram.com/lerato_ny"
           target="_blank"
           rel="noreferrer"
         >
           <li title="Instagram">
-            <i className="fab fa-instagram"></i>
+            <FontAwesomeIcon icon={faInstagram} />
           </li>
         </a>
         <a
@@ -36,7 +44,7 @@ export default function Footer() {
           rel="noreferrer"
         >
           <li title="Dribble">
-            <i className="fas fa-basketball-ball"></i>
+            <FontAwesomeIcon icon={faDribbble} />
           </li>
         </a>
       </ul>

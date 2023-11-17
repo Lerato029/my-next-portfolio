@@ -27,6 +27,7 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 50px;
+  cursor: pointer;
 }
 
 .socialMedia small {
@@ -61,12 +62,6 @@
   text-decoration: none;
   background-color: #CF8E07;
   /* animation called */
-  -webkit-animation-name: bounce;
-          animation-name: bounce;
-  -webkit-animation-timing-function: ease;
-          animation-timing-function: ease;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
   /*  animation-iteration-count: infinite; */
 }
 
@@ -135,6 +130,10 @@
 .slide-left {
   -webkit-animation: slide-left 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite alternate-reverse both;
   animation: slide-left 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite alternate-reverse both;
+}
+
+div {
+  transition: all 8000ms ease-in-out;
 }
 
 /* =======================================Animations=============================================== */
@@ -237,14 +236,13 @@
 }
 
 .btn-outline {
-  color: white;
-  border: 1px solid white;
+  color: #16333F;
+  border: 1px solid #16333F;
   border-radius: 0.6rem;
-  transition-duration: 1s;
+  transition: all 800ms ease-in-out;
 }
 
 .btn-outline:hover {
-  color: #6EC7AA;
   transform: scale(1.05);
 }
 
@@ -282,6 +280,10 @@
   color: #16333F;
 }
 
+.textLight {
+  color: #FFFFFF;
+}
+
 .bgMustard {
   background: #CF8E07;
 }
@@ -290,12 +292,20 @@
   background: #FDC128;
 }
 
+.bgWhite {
+  background: #FFFFFF;
+}
+
 .bgDark {
   background: #16333F;
 }
 
 .bgMint {
   background: #6EC7AA;
+}
+
+.bgBlue {
+  background: #4CAABC;
 }
 
 .bgRed {
@@ -396,13 +406,6 @@ title {
   stroke-width: 2px;
 }
 
-.middle {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
 .card {
   border-radius: 0;
   border: none;
@@ -410,6 +413,10 @@ title {
 
 a {
   cursor: pointer;
+}
+
+ul {
+  list-style: none;
 }
 
 a:hover {
@@ -437,11 +444,16 @@ a:hover {
 
 .navbar {
   background: #4CAABC;
-  height: 14vh !important;
 }
 
 .active {
-  border-left: 1px solid white;
+  border-left: 1px solid #FFFFFF;
+  padding-left: 2px;
+  color: #16333F;
+}
+
+.nav-link {
+  color: #FFFFFF;
 }
 
 .pointer {
@@ -465,7 +477,20 @@ a:hover {
   box-shadow: 8px 8px 16px #081418;
 }
 
+/*==================================Widths============================*/
+.w100 {
+  width: 100%;
+}
+
+.maxWidth {
+  max-width: 2600px;
+}
+
 /*==================================Heights============================*/
+.h100 {
+  height: 100%;
+}
+
 .h7rem {
   min-height: 7rem !important;
 }
@@ -476,6 +501,10 @@ a:hover {
 
 .vh80 {
   height: 100vh;
+}
+
+.vh20 {
+  height: 20vh;
 }
 
 .scrollSection {
@@ -547,13 +576,28 @@ a:hover {
     padding-left: 0rem !important;
     padding-right: 0rem !important;
   }
+  .smHide {
+    display: none;
+  }
 }
 /*=======================================align====================================*/
+.flex {
+  display: flex;
+}
+
 .middle {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.overlay-bottom {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding-bottom: 4rem;
 }
 
 .middle-bottom {
@@ -568,4 +612,34 @@ a:hover {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+}
+
+div, img {
+  transition: all 800ms ease-in-out;
+}
+
+.profilePic {
+  margin-top: 30px;
+  border-radius: 50%;
+  height: 15rem;
+  width: 15rem;
+  background-color: #c81e2a;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .profilePic {
+    margin-top: 30px;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }/*# sourceMappingURL=styles.css.map */
