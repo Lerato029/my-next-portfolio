@@ -1,6 +1,6 @@
 {
-  "name": "my-first-next",
-  "version": "0.1.0",
+  "name": "portfolio-by-lerato",
+  "version": "3.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
