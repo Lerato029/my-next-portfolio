@@ -34,24 +34,6 @@ import {
 export default function Home() {
   //default list of projects
 
-  const solution = (A) => {
-    // Implement your solution here
-    const myArr = A.sort();
-
-    for (let i = 1; i < myArr.length; i++) {
-      if (i !== myArr[i]) {
-        // if (myArr.includes(i) === false) {
-        console.log(myArr, "myArr");
-        return i;
-        //   }
-        // } else {
-        //   return i;
-        // }
-      }
-    }
-  };
-
-  console.log(solution([1, 2, 3]));
   return (
     <>
       <Head>
