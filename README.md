@@ -16,5 +16,10 @@ npm run dev
 ```
 App can now be viewed on: [http://localhost:3000](http://localhost:3000) 
 
+Push Work To Github:
+git add --all
 
+git commit -m "First commit"
+
+git push  origin
 
