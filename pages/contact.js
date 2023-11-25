@@ -1,20 +1,30 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Nav from "../components/Nav";
 import Loading from "../components/Loading";
 import Toast from "../components/Toast";
-import ReCAPTCHA from "react-google-recaptcha";
+// import ReCAPTCHA from "react-google-recaptcha";
 import Head from "next/head";
 import Image from "next/image";
-const API_KEY = process.env.NEXT_PUBLIC_RECAPTURE_CLIENT;
-console.log("API_KEY", API_KEY);
+import emailjs from "@emailjs/browser";
 
+const API_KEY = process.env.NEXT_PUBLIC_RECAPTURE_CLIENT;
+const SERVICE_ID = process.env.NEXT_PUBLIC_SERVICE_ID;
+const TEMP_ID = process.env.NEXT_PUBLIC_TEMP_ID;
+const EMAILJS_API_KEY = process.env.NEXT_PUBLIC_EMAILJS_API_KEY;
+
+const defaultForm = {
+  name: "",
+  email: "",
+  message: "",
+};
 export default function Contact() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  const formRef = useRef();
+  const [form, setForm] = useState(defaultForm);
+
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [notify, setNotify] = useState("");
+  const [hasError, setHasError] = useState(false);
 
   const contact = [
     {
@@ -33,19 +43,40 @@ export default function Contact() {
     },
   ];
 
-  function onChange(value) {
-    console.log("Captcha value:", value);
+  function handleFormChange(e) {
+    const { name, value } = e.target;
+    setForm({ ...form, [name]: value });
   }
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
-    let data = {
-      name,
-      email,
-      message,
-    };
 
+    emailjs
+      .send(
+        SERVICE_ID,
+        TEMP_ID,
+        {
+          from_name: form.name,
+          to_name: "Lerato",
+          from_email: form.email,
+          to_email: "lerato.m029@gmail.com",
+          message: form.message,
+        },
+        EMAILJS_API_KEY
+      )
+      .then(
+        () => {
+          setLoading(false);
+          setSubmitted(true);
+          setForm(defaultForm);
+        },
+        (error) => {
+          setLoading(false);
+          console.log(error);
+          setNotify("show");
+        }
+      );
     // fetch("/api/contact", {
     //   method: "POST",
     //   headers: {
@@ -54,8 +85,7 @@ export default function Contact() {
     //   },
     //   body: JSON.stringify(data),
     // }).then((res) => {
-    console.log(res);
-    console.log("Response received");
+
     // if (res.status === 200) {
     //   setLoading(false);
     //   setSubmitted(true);
@@ -63,8 +93,7 @@ export default function Contact() {
     //   setEmail("");
     //   setMessage("");
     // } else {
-    setLoading(false);
-    setNotify("show");
+
     // }
     // });
   };
@@ -74,7 +103,7 @@ export default function Contact() {
         <title>Contact</title>
       </Head>
       {loading && <Loading />}
-      <Toast notify={notify} setNotify={() => setNotify("")} />
+      <Toast hasError={hasError} setHasError={() => setHasError(!hasError)} />
       <Nav />
       <div className="container-fluid landing ">
         <h2 className="mb-5 text-center">Contact Details</h2>
@@ -102,7 +131,7 @@ export default function Contact() {
         ))}
       </div>
       <div className="container mt-5">
-        <form className="row" onSubmit={handleSubmit}>
+        <form className="row" onSubmit={handleSubmit} ref={formRef}>
           <div
             className="col-md-6 middle card"
             style={{
@@ -137,37 +166,37 @@ export default function Contact() {
                   <div className="col-md-6">
                     <input
                       type="text"
-                      name="title"
-                      value={name}
+                      name="name"
+                      value={form.name}
                       placeholder="Name"
                       className="d-block my-4 w-100 p-2 form-control"
                       required
-                      onChange={(e) => setName(e.target.value)}
+                      onChange={handleFormChange}
                     />
                   </div>
-                  <div class="col-md-6">
+                  <div className="col-md-6">
                     <input
                       required
                       aria-describedby="emailHelp"
                       type="email"
-                      name="title"
-                      value={email}
+                      name="email"
+                      value={form.email}
                       placeholder="Email"
                       className="d-block my-4 w-100 p-2 form-control"
-                      onChange={(e) => setEmail(e.target.value)}
+                      onChange={handleFormChange}
                     />
                   </div>
                 </div>
 
                 <textarea
                   required
-                  name="content"
+                  name="message"
                   id="description"
                   cols="30"
                   rows="6"
                   placeholder="Content"
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
+                  value={form.message}
+                  onChange={handleFormChange}
                   className="d-block my-4 w-100 p-2 form-control"
                 />
 

@@ -4,7 +4,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Project from "../projects/Project";
-
+import FadeIn from "../transitions/FadeIn";
 export default function UxUi({ uxui, caseStudies }) {
   return (
     <Container id="uxui">
@@ -37,9 +37,11 @@ export default function UxUi({ uxui, caseStudies }) {
         </Col>
       </Row>
       <Row className=" py-2">
-        {caseStudies.map((caseS) => (
+        {caseStudies.map((caseS, index) => (
           <Col key={caseS.name} sm={12} lg={4}>
-            <Project project={caseS} />
+            <FadeIn delayValue={0.8 * index}>
+              <Project project={caseS} />
+            </FadeIn>
           </Col>
         ))}
       </Row>

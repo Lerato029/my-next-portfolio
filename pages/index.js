@@ -1,6 +1,6 @@
 //Used for custom titles
 import Link from "next/link";
-
+import { motion } from "framer-motion";
 import Nav from "../components/Nav";
 import LandingSVG from "../components/LandingSVG";
 import Projects from "../components/projects/Projects";
@@ -18,6 +18,8 @@ import Bio from "../components/home/Bio";
 import Blogs from "../components/home/Blogs";
 import UxUi from "../components/home/UxUi";
 import GraphicDesign from "../components/home/GraphicDesign";
+
+import FadeIn from "../components/transitions/FadeIn";
 
 import {
   hyArticle,
@@ -42,21 +44,21 @@ export default function Home() {
       <Container fluid className="p-0">
         {" "}
         <LandingSVG />
-      </Container>
+      </Container>{" "}
       <Nav />
-      <Bio />
+      <FadeIn>
+        <Bio />
+      </FadeIn>
       {/* Projects Sections */}
       <ProjectNav projects={sectionsPortfolio} />
-      <MyScrollspy />
-
+      <FadeIn>
+        <MyScrollspy />
+      </FadeIn>
       {/* UXUI */}
       <H2Title title="UX/UI Design" />
-
       <UxUi uxui={uxui} caseStudies={caseStudies} />
-
       {/* website */}
       <H2Title title="Websites" />
-
       <Container id="websites">
         <Row className="h100 py-2">
           <Col sm={12} lg={6} className="p-0 middle">
@@ -67,20 +69,18 @@ export default function Home() {
           </Col>
         </Row>
       </Container>
-
       {/* Graphic Design */}
       <H2Title title="Graphic Design" />
-
-      <GraphicDesign gdesign={gdesign} />
-
+      <FadeIn idValue={"gdesign"} delayValue={0}>
+        {" "}
+        <GraphicDesign gdesign={gdesign} />
+      </FadeIn>
       {/* Blog Sections */}
       <H2Title title="Recent Blogs" />
-
-      <div className="container text-center" id="articles">
-        {" "}
+      <FadeIn idValue={"articles"} delayValue={0}>
         <Project project={hyArticle} />
         <Blogs blogs={blogs} />
-      </div>
+      </FadeIn>
       <div className="landing">
         <Link href="/about">
           <button type="button" className="btn btn-info fw-bold">

@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.11.0",
     "@fortawesome/fontawesome-svg-core": "^6.4.2",
     "@fortawesome/free-brands-svg-icons": "^6.4.2",
     "@fortawesome/free-regular-svg-icons": "^6.4.2",
@@ -17,11 +18,12 @@
     "animejs": "3.2.1",
     "bootstrap": "^5.3.2",
     "caniuse-lite": "^1.0.30001367",
+    "framer-motion": "^10.16.5",
     "next": "^12.3.0",
     "nodemailer": "6.6.3",
-    "react": "17.0.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-bootstrap": "^2.9.1",
-    "react-dom": "17.0.2",
     "react-google-recaptcha": "^2.1.0",
     "react-scrollspy": "^3.4.3",
     "sharp": "^0.31.0"
@@ -30,6 +32,4 @@
     "eslint": "8.23.1",
     "eslint-config-next": "12.3.0"
   }
-
- 
 }

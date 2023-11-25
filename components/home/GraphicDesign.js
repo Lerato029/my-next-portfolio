@@ -8,7 +8,7 @@ import Slider from "../projects/Slider";
 
 export default function UxUi({ gdesign }) {
   return (
-    <Container id="gdesign">
+    <Container>
       <Row className="py-2">
         <Col lg={12} className="p-0 middle">
           <Project project={gdesign.uhuruES} />

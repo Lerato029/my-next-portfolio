@@ -1,10 +1,9 @@
 import React from "react";
 
-export default function Toast({ setNotify, notify }) {
+export default function Toast({ setHasError, hasError }) {
   return (
     <div
-      className={`toast ${notify} text-white bgRed`}
-    
+      className={`toast ${hasError && "show"} text-white bgRed`}
       role="alert"
       ariaLive="assertive"
       ariaAtomic="true"
@@ -23,7 +22,7 @@ export default function Toast({ setNotify, notify }) {
           className="btn-close "
           data-bs-dismiss="toast"
           aria-label="Close"
-          onClick={setNotify}
+          onClick={setHasError}
         ></button>
       </div>
       <div className="toast-body">Oops! something went wrong</div>

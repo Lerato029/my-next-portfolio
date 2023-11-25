@@ -135,7 +135,8 @@ export default function About() {
             className="offcanvas-title text-uppercase fw-bold"
             id="offcanvasExampleLabel"
           >
-            {info.company} <span class="badge bg-secondary">{info.year}</span>
+            {info.company}{" "}
+            <span className="badge bg-secondary">{info.year}</span>
           </h5>
           <button
             type="button"

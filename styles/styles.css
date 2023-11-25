@@ -585,6 +585,13 @@ a:hover {
   display: flex;
 }
 
+.flexWrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+}
+
 .middle {
   display: flex;
   flex-direction: column;
