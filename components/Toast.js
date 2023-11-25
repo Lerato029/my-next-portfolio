@@ -15,7 +15,7 @@ export default function Toast({ setHasError, hasError }) {
         position: "fixed",
       }}
     >
-      <div className={`text-white toast-header bgRed`}>
+      <div className={`text-white toast-header $bgRed`}>
         <strong className="me-auto">Error</strong>
         <button
           type="button"

@@ -7,7 +7,6 @@ import Head from "next/head";
 import Image from "next/image";
 import emailjs from "@emailjs/browser";
 
-const API_KEY = process.env.NEXT_PUBLIC_RECAPTURE_CLIENT;
 const SERVICE_ID = process.env.NEXT_PUBLIC_SERVICE_ID;
 const TEMP_ID = process.env.NEXT_PUBLIC_TEMP_ID;
 const EMAILJS_API_KEY = process.env.NEXT_PUBLIC_EMAILJS_API_KEY;
@@ -23,7 +22,6 @@ export default function Contact() {
 
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [notify, setNotify] = useState("");
   const [hasError, setHasError] = useState(false);
 
   const contact = [
@@ -74,7 +72,6 @@ export default function Contact() {
         (error) => {
           setLoading(false);
           console.log(error);
-          setNotify("show");
         }
       );
     // fetch("/api/contact", {
