@@ -152,6 +152,9 @@ a:hover {
 .borderMint {
   border: 16px solid $mint;
 }
+.borderYellow {
+  border: 16px solid $yellow;
+}
 
 .borderLgRadius {
   /* border: 1px solid #fff; */
@@ -168,6 +171,7 @@ a:hover {
   padding-left: 7rem !important;
   padding-right: 7rem !important;
 }
+
 .px14rem {
   padding-left: 14rem !important;
   padding-right: 14rem !important;
@@ -269,7 +273,7 @@ html {
 
 .sectionVH {
   padding-top: 30vh;
-  padding-bottom: 30vh;
+  padding-bottom: 8rem;
   position: relative;
 }
 
@@ -304,7 +308,7 @@ html {
 
 .parallax span {
   display: block;
-  margin-right: 30px;
+  margin-right: 40px;
 }
 
 .isDisabled {
@@ -323,5 +327,5 @@ html {
 
 /* The Transformation */
 .imgZoom:hover img {
-  transform: scale(1.5);
+  transform: scale(1.2);
 }

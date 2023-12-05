@@ -36,7 +36,7 @@ function Project({ project = defProject, isShowOverlay = true }) {
       </a>
 
       {isShowOverlay && (
-        <div className="middle overlay-bottom pb-4">
+        <div className="middle overlay-bottom  pb-5 ">
           <div
             className="middle"
             style={isHover ? { opacity: 1 } : { opacity: 0 }}

@@ -53,7 +53,7 @@ export default function Home() {
       <ProjectNav projects={sectionsPortfolio} />
       <MyScrollspy />
       {/* UXUI */}
-      <ParaText />
+      {/* <ParaText title="UX/UI Design" /> */}
       <H2Title title="UX/UI Design" />
       <UxUi uxui={uxui} caseStudies={caseStudies} />
       {/* website */}

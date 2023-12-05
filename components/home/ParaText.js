@@ -16,7 +16,7 @@ function ParallaxText({ children, baseVelocity = 100 }) {
   const scrollVelocity = useVelocity(scrollY);
   const smoothVelocity = useSpring(scrollVelocity, {
     damping: 50,
-    stiffness: 400,
+    stiffness: 100,
   });
   const velocityFactor = useTransform(smoothVelocity, [0, 1000], [0, 5], {
     clamp: false,
@@ -27,11 +27,11 @@ function ParallaxText({ children, baseVelocity = 100 }) {
    * have to replace for wrapping that works for you or dynamically
    * calculate
    */
-  const x = useTransform(baseX, (v) => `${wrap(-20, -45, v)}%`);
+  const x = useTransform(baseX, (v) => `${wrap(-6, -35, v)}%`);
 
   const directionFactor = useRef(1);
   useAnimationFrame((t, delta) => {
-    let moveBy = directionFactor.current * baseVelocity * (delta / 3000);
+    let moveBy = directionFactor.current * baseVelocity * (delta / 1000);
 
     /**
      * This is what changes the direction of the scroll once we
@@ -67,11 +67,14 @@ function ParallaxText({ children, baseVelocity = 100 }) {
   );
 }
 
-export default function App() {
+export default function App({ title }) {
   return (
-    <section>
-      <ParallaxText baseVelocity={-5}>Framer Motion</ParallaxText>
-      <ParallaxText baseVelocity={5}>Scroll velocity</ParallaxText>
+    <section className="sectionVH">
+      {/* <ParallaxText baseVelocity={-20}>{title}</ParallaxText>{" "}
+      <ParallaxText baseVelocity={-5}>{title}</ParallaxText> */}
+      <ParallaxText baseVelocity={-15}>{title}</ParallaxText>
+      <ParallaxText baseVelocity={-10}>{title}</ParallaxText>
+      <ParallaxText baseVelocity={20}>{title}</ParallaxText>
     </section>
   );
 }

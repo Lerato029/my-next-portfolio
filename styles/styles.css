@@ -45,7 +45,7 @@
   margin: 0.3rem;
   height: 2.8rem;
   width: 2.8rem;
-  background-color: #16333f;
+  background-color: #16333F;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -60,7 +60,7 @@
 /* hover effect... */
 .socialMedia li:hover {
   text-decoration: none;
-  background-color: #cf8e07;
+  background-color: #CF8E07;
   /* animation called */
   /*  animation-iteration-count: infinite; */
 }
@@ -114,14 +114,12 @@
   transform: scale(0.9);
 }
 .prime:hover .card {
-  background: #4caabc !important;
+  background: #4CAABC !important;
 }
 
 .slide-top {
-  -webkit-animation: slide-top 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite
-    alternate-reverse both;
-  animation: slide-top 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite
-    alternate-reverse both;
+  -webkit-animation: slide-top 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite alternate-reverse both;
+  animation: slide-top 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite alternate-reverse both;
 }
 
 .slide-right {
@@ -130,10 +128,8 @@
 }
 
 .slide-left {
-  -webkit-animation: slide-left 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite
-    alternate-reverse both;
-  animation: slide-left 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite
-    alternate-reverse both;
+  -webkit-animation: slide-left 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite alternate-reverse both;
+  animation: slide-left 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite alternate-reverse both;
 }
 
 div {
@@ -231,17 +227,17 @@ div {
 }
 
 .btn-success {
-  background: #16333f;
-  border: #16333f;
+  background: #16333F;
+  border: #16333F;
 }
 
 .btn-success:hover {
-  background: #4caabc;
+  background: #4CAABC;
 }
 
 .btn-outline {
-  color: #16333f;
-  border: 1px solid #16333f;
+  color: #16333F;
+  border: 1px solid #16333F;
   border-radius: 0.6rem;
   transition: all 800ms ease-in-out;
 }
@@ -256,60 +252,60 @@ div {
 }
 
 .btn-danger:hover {
-  background: #cf8e07;
+  background: #CF8E07;
 }
 
 .btn-info {
-  background: #6ec7aa;
-  border: #6ec7aa;
-  color: #16333f;
+  background: #6EC7AA;
+  border: #6EC7AA;
+  color: #16333F;
 }
 
 .btn-info:hover {
-  background: #4caabc;
+  background: #4CAABC;
 }
 
 .btn-warning {
-  background: #fdc128;
-  border: #fdc128;
+  background: #FDC128;
+  border: #FDC128;
   color: white;
 }
 
 .btn-warning:hover {
-  background: #cf8e07;
+  background: #CF8E07;
   color: white;
 }
 
 .textDark {
-  color: #16333f;
+  color: #16333F;
 }
 
 .textLight {
-  color: #ffffff;
+  color: #FFFFFF;
 }
 
 .bgMustard {
-  background: #cf8e07;
+  background: #CF8E07;
 }
 
 .bgYellow {
-  background: #fdc128;
+  background: #FDC128;
 }
 
 .bgWhite {
-  background: #ffffff;
+  background: #FFFFFF;
 }
 
 .bgDark {
-  background: #16333f;
+  background: #16333F;
 }
 
 .bgMint {
-  background: #6ec7aa;
+  background: #6EC7AA;
 }
 
 .bgBlue {
-  background: #4caabc;
+  background: #4CAABC;
 }
 
 .bgRed {
@@ -339,22 +335,22 @@ div {
   height: 0;
   margin: 8px;
   box-sizing: border-box;
-  border: 32px solid #4caabc;
-  border-color: #4caabc transparent #cf8e07 transparent;
+  border: 32px solid #4CAABC;
+  border-color: #4CAABC transparent #CF8E07 transparent;
   -webkit-animation: lds-hourglass 1.2s infinite;
-  animation: lds-hourglass 1.2s infinite;
+          animation: lds-hourglass 1.2s infinite;
 }
 
 @-webkit-keyframes lds-hourglass {
   0% {
     transform: rotate(0);
     -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+            animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
   }
   50% {
     transform: rotate(900deg);
     -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   }
   100% {
     transform: rotate(1800deg);
@@ -365,12 +361,12 @@ div {
   0% {
     transform: rotate(0);
     -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+            animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
   }
   50% {
     transform: rotate(900deg);
     -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   }
   100% {
     transform: rotate(1800deg);
@@ -399,23 +395,19 @@ title {
   width: "1640";
 }
 #landingSVG:hover #mainRect {
-  fill: #cf8e07;
+  fill: #CF8E07;
 }
 #landingSVG:hover #rect-light {
-  fill: #ffffff !important;
+  fill: #FFFFFF !important;
 }
 #landingSVG:hover #foot {
-  d: path(
-    "M1279.7 643.589C1281.57 647.989 1282.54 651.297 1282.62 653.512C1282.72 656.206 1282.4 660.154 1281.67 665.356C1278.48 665.47 1249.8 666.501 1195.65 668.447C1193.15 661.288 1194.3 657.333 1199.1 656.583C1203.89 655.833 1207.88 655.168 1211.05 654.588L1250.4 635.691C1251.16 635.328 1252.07 635.634 1252.44 636.375C1252.45 636.388 1252.45 636.401 1252.46 636.414L1255.25 642.428C1259.78 644.306 1263.44 645.194 1266.23 645.094C1268.49 645.013 1271.59 644.004 1275.51 642.069L1275.51 642.069C1277.02 641.326 1278.85 641.92 1279.61 643.395C1279.64 643.458 1279.67 643.523 1279.7 643.589Z"
-  ) !important;
+  d: path("M1279.7 643.589C1281.57 647.989 1282.54 651.297 1282.62 653.512C1282.72 656.206 1282.4 660.154 1281.67 665.356C1278.48 665.47 1249.8 666.501 1195.65 668.447C1193.15 661.288 1194.3 657.333 1199.1 656.583C1203.89 655.833 1207.88 655.168 1211.05 654.588L1250.4 635.691C1251.16 635.328 1252.07 635.634 1252.44 636.375C1252.45 636.388 1252.45 636.401 1252.46 636.414L1255.25 642.428C1259.78 644.306 1263.44 645.194 1266.23 645.094C1268.49 645.013 1271.59 644.004 1275.51 642.069L1275.51 642.069C1277.02 641.326 1278.85 641.92 1279.61 643.395C1279.64 643.458 1279.67 643.523 1279.7 643.589Z") !important;
 }
 #landingSVG:hover #switch {
-  d: path(
-    "M1229 673C1229 676.866 1215.79 680 1199.5 680C1183.21 680 1170 676.866 1170 673C1170 669.134 1183.21 666 1199.5 666C1215.79 666 1229 669.134 1229 673Z"
-  ) !important;
+  d: path("M1229 673C1229 676.866 1215.79 680 1199.5 680C1183.21 680 1170 676.866 1170 673C1170 669.134 1183.21 666 1199.5 666C1215.79 666 1229 669.134 1229 673Z") !important;
 }
 #landingSVG:hover #title {
-  fill: #16333f;
+  fill: #16333F;
 }
 #landingSVG:hover #titleVLine,
 #landingSVG:hover #titleHLine {
@@ -436,7 +428,7 @@ ul {
 }
 
 a:hover {
-  color: #16333f;
+  color: #16333F;
 }
 
 .opaqueBorder {
@@ -459,17 +451,17 @@ a:hover {
 }
 
 .navbar {
-  background: #4caabc;
+  background: #4CAABC;
 }
 
 .active {
-  border-left: 1px solid #ffffff;
+  border-left: 1px solid #FFFFFF;
   padding-left: 2px;
-  color: #16333f;
+  color: #16333F;
 }
 
 .nav-link {
-  color: #ffffff;
+  color: #FFFFFF;
 }
 
 .pointer {
@@ -553,17 +545,17 @@ a:hover {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #16333f;
+  background: #16333F;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #fdc128;
+  background: #FDC128;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #4caabc;
+  background: #4CAABC;
 }
 
 /*==================================Border Colours============================*/
@@ -573,7 +565,11 @@ a:hover {
 }
 
 .borderMint {
-  border: 16px solid #6ec7aa;
+  border: 16px solid #6EC7AA;
+}
+
+.borderYellow {
+  border: 16px solid #FDC128;
 }
 
 .borderLgRadius {
@@ -600,9 +596,9 @@ a:hover {
 /*====================Small Phones==================*/
 @media screen and (max-width: 768px) {
   .px7rem,
-  .px14rem {
-    padding-left: 0rem !important;
-    padding-right: 0rem !important;
+.px14rem {
+    padding-left: 3rem !important;
+    padding-right: 3rem !important;
   }
   .smHide {
     display: none;
@@ -690,12 +686,12 @@ img {
 }
 html {
   -ms-scroll-snap-type: y mandatory;
-  scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
 }
 
 .sectionVH {
   padding-top: 30vh;
-  padding-bottom: 30vh;
+  padding-bottom: 8rem;
   position: relative;
 }
 
@@ -730,7 +726,7 @@ html {
 
 .parallax span {
   display: block;
-  margin-right: 30px;
+  margin-right: 40px;
 }
 
 .isDisabled {
@@ -750,5 +746,5 @@ html {
 
 /* The Transformation */
 .imgZoom:hover img {
-  transform: scale(1.5);
-} /*# sourceMappingURL=styles.css.map */
+  transform: scale(1.2);
+}/*# sourceMappingURL=styles.css.map */

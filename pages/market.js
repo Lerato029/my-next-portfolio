@@ -34,7 +34,8 @@ export default function About() {
         </div>
       </Link>
       <section className="py-5 px-5">
-        <h4>Jan 2020 - June 2020</h4>
+        <h4>Duration: Jan 2020 - June 2020</h4>
+        <h4>Role: Urban Architect</h4>
         <h1 className="">The Market Intervention</h1>
       </section>
 
