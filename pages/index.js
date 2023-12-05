@@ -15,20 +15,20 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Project from "../components/projects/Project";
 import Bio from "../components/home/Bio";
-import Blogs from "../components/home/Blogs";
+//import Blogs from "../components/home/Blogs";
 import UxUi from "../components/home/UxUi";
 import GraphicDesign from "../components/home/GraphicDesign";
 
 import FadeIn from "../components/transitions/FadeIn";
 
+import ParaText from "../components/home/ParaText";
+
 import {
   hyArticle,
   tbh,
   hopeA,
-  weatherApp,
   uxui,
   sectionsPortfolio,
-  blogs,
   caseStudies,
   gdesign,
 } from "../lib/projects";
@@ -51,21 +51,20 @@ export default function Home() {
       </FadeIn>
       {/* Projects Sections */}
       <ProjectNav projects={sectionsPortfolio} />
-      <FadeIn>
-        <MyScrollspy />
-      </FadeIn>
+      <MyScrollspy />
       {/* UXUI */}
+      <ParaText />
       <H2Title title="UX/UI Design" />
       <UxUi uxui={uxui} caseStudies={caseStudies} />
       {/* website */}
       <H2Title title="Websites" />
-      <Container id="websites">
-        <Row className="h100 py-2">
-          <Col sm={12} lg={6} className="p-0 middle">
+      <Container id="websites" className="px14rem">
+        <Row className="  py-2">
+          <Col sm={12} lg={6} className="middle ">
             <Project project={tbh} />
           </Col>
-          <Col sm={12} lg={6}>
-            <Projects projects={[hopeA, weatherApp]} />
+          <Col sm={12} lg={6} className="middle ">
+            <Project project={hopeA} />
           </Col>
         </Row>
       </Container>
@@ -79,7 +78,7 @@ export default function Home() {
       <H2Title title="Recent Blogs" />
       <FadeIn idValue={"articles"} delayValue={0}>
         <Project project={hyArticle} />
-        <Blogs blogs={blogs} />
+        {/* <Blogs blogs={blogs} /> */}
       </FadeIn>
       <div className="landing">
         <Link href="/about">

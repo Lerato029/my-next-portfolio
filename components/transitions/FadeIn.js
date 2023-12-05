@@ -6,10 +6,9 @@ export default function FadeIn({ children, idValue = "", delayValue = 0 }) {
       whileInView={{ opacity: 1, scale: 1 }}
       id={idValue}
       initial={{ opacity: 0, scale: 0.8 }}
-      exit={{ opacity: 0 }}
       transition={{
         duration: 0.1,
-        ease: "linear",
+        ease: "easeInOut",
         delay: delayValue,
       }}
     >

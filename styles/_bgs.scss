@@ -23,4 +23,9 @@
 .bgRed {
   background: $red;
 }
-
+.bgTrans {
+  background: rgba(255, 255, 255, 0.8);
+}
+.bgNone {
+  background: rgba(255, 255, 255, 0);
+}

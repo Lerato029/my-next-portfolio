@@ -7,44 +7,56 @@ import Project from "../projects/Project";
 import FadeIn from "../transitions/FadeIn";
 export default function UxUi({ uxui, caseStudies }) {
   return (
-    <Container id="uxui">
-      <Row className="py-2">
-        <Col lg={12} className="p-0 middle">
-          <Project project={uxui.verify} />
-        </Col>
-        <Col sm={12} lg={6} className="p-0 middle">
-          <video
-            controls
-            autoPlay={true}
-            loop
-            muted
-            className="w100"
-            style={{ border: "2px solid #000000" }}
-          >
-            <source
-              src="/projects/uxui/task-manager.mov"
-              type="video/mp4"
-            ></source>
-          </video>
-        </Col>
-        <Col sm={12} lg={6} style={{ border: "4px solid #fff" }}>
-          <div className="py-2 px-5">
-            <Project project={uxui.designSystem} />
-          </div>
-          <div className="py-2 px-5">
-            <Project project={uxui.prototype} />
-          </div>
-        </Col>
-      </Row>
-      <Row className=" py-2">
-        {caseStudies.map((caseS, index) => (
-          <Col key={caseS.name} sm={12} lg={4}>
-            <FadeIn delayValue={0.8 * index}>
-              <Project project={caseS} />
-            </FadeIn>
+    <section id="uxui">
+      <Container className="py-5">
+        <Row>
+          <Col lg={12} className="p-0 middle">
+            <Project project={uxui.verify} />
           </Col>
-        ))}
-      </Row>
-    </Container>
+
+          <Col sm={12} lg={4} style={{ border: "4px solid #fff" }}>
+            <div className="">
+              <Project project={uxui.designSystem} />
+            </div>
+          </Col>
+          <Col sm={12} lg={4} className="p-0 middle">
+            <video
+              controls
+              autoPlay={true}
+              loop
+              muted
+              className="w100"
+              style={{ border: "2px solid #000000" }}
+            >
+              <source
+                src="/projects/uxui/task-manager.mov"
+                type="video/mp4"
+              ></source>
+            </video>
+          </Col>
+          <Col sm={12} lg={4} style={{ border: "4px solid #fff" }}>
+            <div className="">
+              <Project project={uxui.prototype} />
+            </div>
+          </Col>
+        </Row>
+      </Container>
+      <Container className="py-5">
+        <Row className="  px14rem">
+          <Col sm={12} lg={8} id="research">
+            <Project project={uxui.market} />
+          </Col>
+          <Col sm={12} lg={4}>
+            {caseStudies.map((caseS) => (
+              <Col key={caseS.name}>
+                <FadeIn>
+                  <Project project={caseS} />
+                </FadeIn>
+              </Col>
+            ))}
+          </Col>
+        </Row>
+      </Container>
+    </section>
   );
 }

@@ -1,252 +1,327 @@
 @mixin fixedBg {
-    margin-top: 0;
-    margin-bottom: 0;
-    text-align: center;
-    height: 50vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: center;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-@import './_variables.scss';
-@import './_footer.scss';
-@import './_projects.scss';
-@import './_animate.scss';
-@import './_buttons.scss';
-@import './_text.scss';
-@import './_bgs.scss';
-@import './_loading.scss';
-@import './_landingSvg.scss';
-
+@import "./_variables.scss";
+@import "./_footer.scss";
+@import "./_projects.scss";
+@import "./_animate.scss";
+@import "./_buttons.scss";
+@import "./_text.scss";
+@import "./_bgs.scss";
+@import "./_loading.scss";
+@import "./_landingSvg.scss";
 
 .card {
-    border-radius: 0;
-    border: none;
+  border-radius: 0;
+  border: none;
 }
 
 a {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 a:hover {
-    color: $dark;
+  color: $dark;
 }
 
 .opaqueBorder {
-    border: 1px solid #4ca9bc56;
+  border: 1px solid #4ca9bc56;
 }
 .opaque {
-    background: #4ca9bc28;
+  background: #4ca9bc28;
 }
 
 .landing {
-    @include fixedBg();
+  @include fixedBg();
 }
 
 .navbar {
-    background: $aqua;
-
+  background: $aqua;
 }
 
 .active {
-    border-left: 1px solid $white;
-    padding-left: 2px;
-    color:$dark
+  border-left: 1px solid $white;
+  padding-left: 2px;
+  color: $dark;
 }
 .nav-link {
-    color: $white
+  color: $white;
 }
 .pointer {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .imgLink {
-    cursor: pointer;
-    transition: transform 0.5s ease-in-out 0.05s;
+  cursor: pointer;
+  transition: transform 0.5s ease-in-out 0.05s;
 }
 
 .imgLink:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .hero {
-    height: 80vh;
+  height: 80vh;
 }
 
 .shadowMain {
-    box-shadow: 8px 8px 16px #081418;
+  box-shadow: 8px 8px 16px #081418;
 }
 
 /*==================================Widths============================*/
-.w100{
-    width: 100%
+.w100 {
+  width: 100%;
 }
-.maxWidth{
-    max-width: 2600px;
+.maxWidth {
+  max-width: 2600px;
 }
 /*==================================Heights============================*/
+.min90vh {
+  min-height: 60vh;
+}
 .h100 {
-    height: 100% 
+  height: 100%;
 }
 .h7rem {
-    min-height: 7rem !important;
+  min-height: 7rem !important;
 }
 .vh100 {
-    height: 100vh;
+  height: 100vh;
 }
 
 .vh80 {
-    height: 100vh;
+  height: 80vh;
+}
+.vh60 {
+  height: 60vh;
 }
 .vh20 {
-    height: 20vh;
+  height: 20vh;
 }
 
 .scrollSection {
-    height: 90vh;
-    overflow-y: scroll;
+  height: 90vh;
+  overflow-y: scroll;
 }
 /*==================================Widths============================*/
 .w-5 {
-    width: 5% !important;
+  width: 5% !important;
 }
 
 .maxWidthTxt {
-    max-width: 50rem !important;
+  max-width: 50rem !important;
 }
 /*==================================Scroll Bar============================*/
 /* width */
 ::-webkit-scrollbar {
-    width: 10px;
+  width: 10px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: $dark;
+  background: $dark;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: $yellow;
+  background: $yellow;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: $aqua;
+  background: $aqua;
 }
 
 /*==================================Border Colours============================*/
 .borderWhite {
-    border: 1px solid #fff;
-    border-radius: 0.625rem;
+  border: 1px solid #fff;
+  border-radius: 0.625rem;
+}
+.borderMint {
+  border: 16px solid $mint;
 }
 
 .borderLgRadius {
-    /* border: 1px solid #fff; */
-    border-radius: 1.25rem;
+  /* border: 1px solid #fff; */
+  border-radius: 1.25rem;
 }
 
 .borderLgRadiusTop {
-    /* border: 1px solid #fff; */
-    border-radius: 1.25rem 1.25rem 0 0;
+  /* border: 1px solid #fff; */
+  border-radius: 1.25rem 1.25rem 0 0;
 }
 
 /*===========================Responsive Padding============================*/
 .px7rem {
-    padding-left: 7rem !important;
-    padding-right: 7rem !important;
+  padding-left: 7rem !important;
+  padding-right: 7rem !important;
 }
 .px14rem {
-    padding-left: 14rem !important;
-    padding-right: 14rem !important;
+  padding-left: 14rem !important;
+  padding-right: 14rem !important;
 }
 //=====================Responsive=========================
 /*====================Small Phones==================*/
 @media screen and (max-width: 768px) {
-    .px7rem,
-    .px14rem {
-        padding-left: 0rem !important;
-        padding-right: 0rem !important;
-    }
-    .smHide{
-        display: none;
-    }
+  .px7rem,
+  .px14rem {
+    padding-left: 3rem !important;
+    padding-right: 3rem !important;
+  }
+  .smHide {
+    display: none;
+  }
 }
 /*=======================================align====================================*/
 .flex {
-    display: flex;
+  display: flex;
 }
 .flexWrap {
-    display: flex;
-flex-wrap: wrap;
-gap: 40px;
-justify-content: center;
-
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
 }
 .middle {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .overlay-bottom {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    padding-bottom: 4rem;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .middle-bottom {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .middle-top {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 }
 
+div,
+img {
+  transition: all 800ms ease-in-out;
+}
 
+.profilePic {
+  margin-top: 30px;
+  border-radius: 50%;
+  height: 15rem;
+  width: 15rem;
+  background-color: #c81e2a;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.show-sm {
+  display: none;
+}
 
-div, img {
-    transition: all 800ms ease-in-out ;
-  }
-
-
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
   .profilePic {
     margin-top: 30px;
     border-radius: 50%;
-    height: 15rem;
-    width: 15rem;
-    background-color: #c81e2a;
+    height: 100px;
+    width: 100px;
+
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-
-  @media only screen and (max-width: 768px) {
-    /* For mobile phones: */
-    .profilePic {
-      margin-top: 30px;
-      border-radius: 50%;
-      height: 100px;
-      width: 100px;
-
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+  .show-sm {
+    display: flex;
   }
+  .hide-sm {
+    display: none;
+  }
+}
+
+html {
+  scroll-snap-type: y mandatory;
+}
+
+.sectionVH {
+  padding-top: 30vh;
+  padding-bottom: 30vh;
+  position: relative;
+}
+
+.progress {
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: var(--accent);
+  bottom: 100px;
+}
+
+.parallax {
+  overflow: hidden;
+  letter-spacing: -2px;
+  line-height: 0.8;
+  margin: 0;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.parallax .scroller {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 64px;
+  display: flex;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.parallax span {
+  display: block;
+  margin-right: 30px;
+}
+
+.isDisabled {
+  cursor: default;
+  pointer-events: none;
+}
+
+/* Point-zoom Container */
+.imgZoom {
+  overflow: hidden; /* Removing this will break the effects */
+}
+.imgZoom img {
+  transform-origin: 50% 50%;
+  transition: transform 1s, filter 0.5s ease-out;
+}
+
+/* The Transformation */
+.imgZoom:hover img {
+  transform: scale(1.5);
+}

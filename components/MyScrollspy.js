@@ -15,7 +15,12 @@ function MyScrollspy() {
   const router = useRouter();
 
   return (
-    <Navbar expand="lg" className="bg-body-tertiary middle " sticky="top">
+    <Navbar
+      expand="lg"
+      className="bg-body-tertiary  middle "
+      sticky="top"
+      style={{ top: "40px" }}
+    >
       <Scrollspy
         className="flex m-0 p-0"
         items={["uxui", "websites", "gdesign", "articles"]}
