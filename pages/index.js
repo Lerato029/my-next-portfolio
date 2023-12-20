@@ -41,7 +41,7 @@ export default function Home() {
       <Head>
         <title>Home</title>
       </Head>
-      <Container fluid className="p-0">
+      <Container fluid className="p-0 vh100 bgYellow landingContainer">
         {" "}
         <LandingSVG />
       </Container>{" "}

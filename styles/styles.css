@@ -372,6 +372,12 @@ div {
     transform: rotate(1800deg);
   }
 }
+.landingContainer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
 #rect-light,
 #mainRect,
 #foot,
@@ -392,10 +398,9 @@ title {
 
 #landingSVG {
   transition: all 1000ms ease-in-out;
-  width: "1640";
 }
-#landingSVG:hover #mainRect {
-  fill: #CF8E07;
+#landingSVG:hover .landingContainer {
+  background-color: #CF8E07;
 }
 #landingSVG:hover #rect-light {
   fill: #FFFFFF !important;
@@ -414,6 +419,13 @@ title {
   stroke-width: 2px;
 }
 
+/*====================Small Phones==================*/
+@media screen and (max-width: 768px) {
+  #title {
+    transform: scale(1.2);
+    translate: 0px -150px;
+  }
+}
 .card {
   border-radius: 0;
   border: none;
@@ -509,6 +521,10 @@ a:hover {
 
 .vh100 {
   height: 100vh;
+}
+
+.vh90 {
+  height: 90vh;
 }
 
 .vh80 {
