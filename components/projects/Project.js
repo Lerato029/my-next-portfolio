@@ -43,11 +43,7 @@ function Project({ project = defProject, isShowOverlay = true }) {
           >
             {" "}
             {project.url ? (
-              <a
-                className="btn btn-outline middle"
-                href={project.url}
-                rel="noreferrer"
-              >
+              <a className="btn middle" href={project.url} rel="noreferrer">
                 <Card.Title className="textDark m-0">{project.name}</Card.Title>
               </a>
             ) : (

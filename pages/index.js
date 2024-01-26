@@ -50,7 +50,7 @@ export default function Home() {
         <Bio />
       </FadeIn>
       {/* Projects Sections */}
-      <ProjectNav projects={sectionsPortfolio} />
+      {/* <ProjectNav projects={sectionsPortfolio} /> */}
       <MyScrollspy />
       {/* UXUI */}
       {/* <ParaText title="UX/UI Design" /> */}

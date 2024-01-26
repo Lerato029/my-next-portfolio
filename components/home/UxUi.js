@@ -13,7 +13,7 @@ export default function UxUi({ uxui, caseStudies }) {
           <Col lg={12} className="p-0 middle">
             <Project project={uxui.verify} />
           </Col>
-
+          {/* 
           <Col sm={12} lg={4} style={{ border: "4px solid #fff" }}>
             <div className="">
               <Project project={uxui.designSystem} />
@@ -38,7 +38,7 @@ export default function UxUi({ uxui, caseStudies }) {
             <div className="">
               <Project project={uxui.prototype} />
             </div>
-          </Col>
+          </Col> */}
         </Row>
       </Container>
       <Container className="py-5">
@@ -49,9 +49,7 @@ export default function UxUi({ uxui, caseStudies }) {
           <Col sm={12} lg={4}>
             {caseStudies.map((caseS) => (
               <Col key={caseS.name}>
-                <FadeIn>
-                  <Project project={caseS} />
-                </FadeIn>
+                <Project project={caseS} />
               </Col>
             ))}
           </Col>
