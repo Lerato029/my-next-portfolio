@@ -132,7 +132,7 @@
   animation: slide-left 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite alternate-reverse both;
 }
 
-div {
+div.overlay-bottom {
   transition: all 800ms ease-in;
 }
 
@@ -660,8 +660,8 @@ a:hover {
   justify-content: flex-start;
 }
 
-div,
-img {
+img,
+.overlay-bottom {
   transition: all 800ms ease-in-out;
 }
 
@@ -763,4 +763,45 @@ html {
 /* The Transformation */
 .imgZoom:hover img {
   transform: scale(1.2);
+}
+
+@-webkit-keyframes bgColor {
+  0% {
+    background-color: #6EC7AA;
+  }
+  25% {
+    background-color: #c81e2a;
+  }
+  50% {
+    background-color: #CF8E07;
+  }
+  75% {
+    background-color: #4CAABC;
+  }
+  100% {
+    background-color: #6EC7AA;
+  }
+}
+
+@keyframes bgColor {
+  0% {
+    background-color: #6EC7AA;
+  }
+  25% {
+    background-color: #c81e2a;
+  }
+  50% {
+    background-color: #CF8E07;
+  }
+  75% {
+    background-color: #4CAABC;
+  }
+  100% {
+    background-color: #6EC7AA;
+  }
+}
+.motionDiv {
+  background: #FDC128;
+  -webkit-animation: bgColor 3s infinite;
+          animation: bgColor 3s infinite;
 }/*# sourceMappingURL=styles.css.map */

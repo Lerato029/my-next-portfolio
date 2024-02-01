@@ -5,6 +5,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Familjen Grotesk", sans-serif;
+  cursor: none;
 }
 
 a {

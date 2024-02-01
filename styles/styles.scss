@@ -228,8 +228,8 @@ a:hover {
   justify-content: flex-start;
 }
 
-div,
-img {
+img,
+.overlay-bottom {
   transition: all 800ms ease-in-out;
 }
 
@@ -330,4 +330,33 @@ html {
 /* The Transformation */
 .imgZoom:hover img {
   transform: scale(1.2);
+}
+
+// @keyframes trail {
+//   to {
+//     transform: scale(0.6);
+//   }
+// }
+@keyframes bgColor {
+  0% {
+    background-color: $mint;
+  }
+  25% {
+    background-color: $red;
+  }
+  50% {
+    background-color: $mustard;
+  }
+  75% {
+    background-color: $aqua;
+  }
+  100% {
+    background-color: $mint;
+  }
+}
+.motionDiv {
+  //filter: blur(1px);
+  background: $yellow;
+  animation: bgColor 3s infinite;
+  // animation: trail 3s linear;
 }

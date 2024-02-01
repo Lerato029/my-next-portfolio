@@ -30,9 +30,6 @@ export default function UxUi({ gdesign }) {
         <Col sm={12} lg={6} style={{ border: "4px solid #fff" }}>
           <Project project={gdesign.runiStickers} />
         </Col>{" "}
-        <Col lg={12} className="p-0 middle">
-          <Project project={gdesign.smoke} />
-        </Col>
       </Row>
     </Container>
   );

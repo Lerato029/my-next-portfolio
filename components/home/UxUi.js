@@ -4,7 +4,6 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Project from "../projects/Project";
-import FadeIn from "../transitions/FadeIn";
 export default function UxUi({ uxui, caseStudies }) {
   return (
     <section id="uxui">
@@ -46,12 +45,9 @@ export default function UxUi({ uxui, caseStudies }) {
           <Col sm={12} lg={8} id="research">
             <Project project={uxui.market} />
           </Col>
-          <Col sm={12} lg={4}>
-            {caseStudies.map((caseS) => (
-              <Col key={caseS.name}>
-                <Project project={caseS} />
-              </Col>
-            ))}
+
+          <Col sm={12} lg={4} style={{ paddingTop: "10rem" }}>
+            <Project project={caseStudies[0]} />
           </Col>
         </Row>
       </Container>
