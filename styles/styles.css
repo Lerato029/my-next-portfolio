@@ -133,7 +133,11 @@
 }
 
 div.overlay-bottom {
-  transition: all 800ms ease-in;
+  transition: all 800ms ease-in-out;
+}
+
+.middle > div {
+  transition: all 800ms ease-in-out;
 }
 
 /* =======================================Animations=============================================== */
@@ -424,6 +428,35 @@ title {
   #title {
     transform: scale(1.2);
     translate: 0px -150px;
+  }
+}
+.card {
+  -webkit-animation: fade-in linear forwards;
+          animation: fade-in linear forwards;
+  animation-timeline: view();
+  animation-range: entry;
+  transition: all 800ms ease-in;
+}
+
+@-webkit-keyframes fade-in {
+  from {
+    scale: 0.8;
+    opacity: 0;
+  }
+  to {
+    scale: 1;
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    scale: 0.8;
+    opacity: 0;
+  }
+  to {
+    scale: 1;
+    opacity: 1;
   }
 }
 .card {

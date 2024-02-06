@@ -11,14 +11,14 @@ const defProject = {
 };
 function Project({ project = defProject, isShowOverlay = true }) {
   const [isHover, setIsHover] = React.useState(false);
-  const handleHover = () => {
-    setIsHover(!isHover);
+  const handleHover = (bool) => {
+    setIsHover(bool);
   };
   return (
     <Card
       className="bgWhite"
-      onMouseEnter={handleHover}
-      onMouseLeave={handleHover}
+      onMouseEnter={() => handleHover(true)}
+      onMouseLeave={() => handleHover(false)}
     >
       <a
         className={project.url ? "" : "isDisabled"}
@@ -41,14 +41,10 @@ function Project({ project = defProject, isShowOverlay = true }) {
             className="middle"
             style={isHover ? { opacity: 1 } : { opacity: 0 }}
           >
-            {" "}
-            {project.url ? (
-              <a className="btn middle" href={project.url} rel="noreferrer">
-                <Card.Title className="textDark m-0">{project.name}</Card.Title>
-              </a>
-            ) : (
+            <a className="btn middle" href={project.url} rel="noreferrer">
               <Card.Title className="textDark m-0">{project.name}</Card.Title>
-            )}
+            </a>
+
             {project.description && (
               <Card.Text className="textDark text-center maxWidthTxt px-2 pt-2">
                 {project.description}

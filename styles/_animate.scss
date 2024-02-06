@@ -18,7 +18,10 @@
 }
 
 div.overlay-bottom {
-  transition: all 800ms ease-in;
+  transition: all 800ms ease-in-out;
+}
+.middle > div {
+  transition: all 800ms ease-in-out;
 }
 
 /* =======================================Animations=============================================== */
