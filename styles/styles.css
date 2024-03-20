@@ -45,7 +45,7 @@
   margin: 0.3rem;
   height: 2.8rem;
   width: 2.8rem;
-  background-color: #16333F;
+  background-color: #16333f;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -60,7 +60,7 @@
 /* hover effect... */
 .socialMedia li:hover {
   text-decoration: none;
-  background-color: #CF8E07;
+  background-color: #cf8e07;
   /* animation called */
   /*  animation-iteration-count: infinite; */
 }
@@ -114,7 +114,7 @@
   transform: scale(0.9);
 }
 .prime:hover .card {
-  background: #4CAABC !important;
+  background: #4caabc !important;
 }
 
 .slide-top {
@@ -231,17 +231,17 @@ div.overlay-bottom {
 }
 
 .btn-success {
-  background: #16333F;
-  border: #16333F;
+  background: #16333f;
+  border: #16333f;
 }
 
 .btn-success:hover {
-  background: #4CAABC;
+  background: #4caabc;
 }
 
 .btn-outline {
-  color: #16333F;
-  border: 1px solid #16333F;
+  color: #16333f;
+  border: 1px solid #16333f;
   border-radius: 0.6rem;
   transition: all 800ms ease-in-out;
 }
@@ -256,60 +256,64 @@ div.overlay-bottom {
 }
 
 .btn-danger:hover {
-  background: #CF8E07;
+  background: #cf8e07;
 }
 
 .btn-info {
-  background: #6EC7AA;
-  border: #6EC7AA;
-  color: #16333F;
+  background: #6ec7aa;
+  border: #6ec7aa;
+  color: #16333f;
 }
 
 .btn-info:hover {
-  background: #4CAABC;
+  background: #4caabc;
 }
 
 .btn-warning {
-  background: #FDC128;
-  border: #FDC128;
+  background: #fdc128;
+  border: #fdc128;
   color: white;
 }
 
 .btn-warning:hover {
-  background: #CF8E07;
+  background: #cf8e07;
   color: white;
 }
 
 .textDark {
-  color: #16333F;
+  color: #16333f;
 }
 
 .textLight {
-  color: #FFFFFF;
+  color: #ffffff;
+}
+
+.textGrey {
+  color: #838f99;
 }
 
 .bgMustard {
-  background: #CF8E07;
+  background: #cf8e07;
 }
 
 .bgYellow {
-  background: #FDC128;
+  background: #fdc128;
 }
 
 .bgWhite {
-  background: #FFFFFF;
+  background: #ffffff;
 }
 
 .bgDark {
-  background: #16333F;
+  background: #16333f;
 }
 
 .bgMint {
-  background: #6EC7AA;
+  background: #6ec7aa;
 }
 
 .bgBlue {
-  background: #4CAABC;
+  background: #4caabc;
 }
 
 .bgRed {
@@ -339,8 +343,8 @@ div.overlay-bottom {
   height: 0;
   margin: 8px;
   box-sizing: border-box;
-  border: 32px solid #4CAABC;
-  border-color: #4CAABC transparent #CF8E07 transparent;
+  border: 32px solid #4caabc;
+  border-color: #4caabc transparent #cf8e07 transparent;
   -webkit-animation: lds-hourglass 1.2s infinite;
           animation: lds-hourglass 1.2s infinite;
 }
@@ -404,10 +408,10 @@ title {
   transition: all 1000ms ease-in-out;
 }
 #landingSVG:hover .landingContainer {
-  background-color: #CF8E07;
+  background-color: #cf8e07;
 }
 #landingSVG:hover #rect-light {
-  fill: #FFFFFF !important;
+  fill: #ffffff !important;
 }
 #landingSVG:hover #foot {
   d: path("M1279.7 643.589C1281.57 647.989 1282.54 651.297 1282.62 653.512C1282.72 656.206 1282.4 660.154 1281.67 665.356C1278.48 665.47 1249.8 666.501 1195.65 668.447C1193.15 661.288 1194.3 657.333 1199.1 656.583C1203.89 655.833 1207.88 655.168 1211.05 654.588L1250.4 635.691C1251.16 635.328 1252.07 635.634 1252.44 636.375C1252.45 636.388 1252.45 636.401 1252.46 636.414L1255.25 642.428C1259.78 644.306 1263.44 645.194 1266.23 645.094C1268.49 645.013 1271.59 644.004 1275.51 642.069L1275.51 642.069C1277.02 641.326 1278.85 641.92 1279.61 643.395C1279.64 643.458 1279.67 643.523 1279.7 643.589Z") !important;
@@ -416,7 +420,7 @@ title {
   d: path("M1229 673C1229 676.866 1215.79 680 1199.5 680C1183.21 680 1170 676.866 1170 673C1170 669.134 1183.21 666 1199.5 666C1215.79 666 1229 669.134 1229 673Z") !important;
 }
 #landingSVG:hover #title {
-  fill: #16333F;
+  fill: #16333f;
 }
 #landingSVG:hover #titleVLine,
 #landingSVG:hover #titleHLine {
@@ -473,7 +477,7 @@ ul {
 }
 
 a:hover {
-  color: #16333F;
+  color: #16333f;
 }
 
 .opaqueBorder {
@@ -496,17 +500,17 @@ a:hover {
 }
 
 .navbar {
-  background: #4CAABC;
+  background: #4caabc;
 }
 
 .active {
-  border-left: 1px solid #FFFFFF;
+  border-left: 1px solid #ffffff;
   padding-left: 2px;
-  color: #16333F;
+  color: #16333f;
 }
 
 .nav-link {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .pointer {
@@ -594,17 +598,17 @@ a:hover {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #16333F;
+  background: #16333f;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #FDC128;
+  background: #fdc128;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #4CAABC;
+  background: #4caabc;
 }
 
 /*==================================Border Colours============================*/
@@ -614,11 +618,11 @@ a:hover {
 }
 
 .borderMint {
-  border: 16px solid #6EC7AA;
+  border: 16px solid #6ec7aa;
 }
 
 .borderYellow {
-  border: 16px solid #FDC128;
+  border: 16px solid #fdc128;
 }
 
 .borderLgRadius {
@@ -800,41 +804,41 @@ html {
 
 @-webkit-keyframes bgColor {
   0% {
-    background-color: #6EC7AA;
+    background-color: #6ec7aa;
   }
   25% {
     background-color: #c81e2a;
   }
   50% {
-    background-color: #CF8E07;
+    background-color: #cf8e07;
   }
   75% {
-    background-color: #4CAABC;
+    background-color: #4caabc;
   }
   100% {
-    background-color: #6EC7AA;
+    background-color: #6ec7aa;
   }
 }
 
 @keyframes bgColor {
   0% {
-    background-color: #6EC7AA;
+    background-color: #6ec7aa;
   }
   25% {
     background-color: #c81e2a;
   }
   50% {
-    background-color: #CF8E07;
+    background-color: #cf8e07;
   }
   75% {
-    background-color: #4CAABC;
+    background-color: #4caabc;
   }
   100% {
-    background-color: #6EC7AA;
+    background-color: #6ec7aa;
   }
 }
 .motionDiv {
-  background: #FDC128;
+  background: #fdc128;
   -webkit-animation: bgColor 3s infinite;
           animation: bgColor 3s infinite;
 }/*# sourceMappingURL=styles.css.map */

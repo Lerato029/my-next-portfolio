@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const defProject = {
   name: "Runi DTS Website",
+  tech: [],
   img: "/projects/websites/runi-website.png",
   altText: "Runi TDS Website Mock-ups overview",
   url: "https://runi.co.za",
@@ -41,10 +42,16 @@ function Project({ project = defProject, isShowOverlay = true }) {
             className="middle"
             style={isHover ? { opacity: 1 } : { opacity: 0 }}
           >
-            <a className="btn middle" href={project.url} rel="noreferrer">
-              <Card.Title className="textDark m-0">{project.name}</Card.Title>
-            </a>
-
+            <Card.Title className="textDark m-0">{project.name}</Card.Title>
+            {project.tech && (
+              <Card.Subtitle className="text-center textGrey maxWidthTxt px-2 pt-2">
+                {project.tech.map((item, index) => (
+                  <span>
+                    {index + 1 >= project.tech.length ? item : item + " | "}
+                  </span>
+                ))}
+              </Card.Subtitle>
+            )}
             {project.description && (
               <Card.Text className="textDark text-center maxWidthTxt px-2 pt-2">
                 {project.description}

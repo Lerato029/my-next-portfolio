@@ -10,7 +10,7 @@ import emailjs from "@emailjs/browser";
 const SERVICE_ID = process.env.NEXT_PUBLIC_SERVICE_ID;
 const TEMP_ID = process.env.NEXT_PUBLIC_TEMP_ID;
 const EMAILJS_API_KEY = process.env.NEXT_PUBLIC_EMAILJS_API_KEY;
-
+// const RECAPTCHA_SITE_KEY = process.env.NEXT_PUBLIC_RECAPTURE_SERVER;
 const defaultForm = {
   name: "",
   email: "",
@@ -18,6 +18,7 @@ const defaultForm = {
 };
 export default function Contact() {
   const formRef = useRef();
+  // const recaptchaRef = useRef();
   const [form, setForm] = useState(defaultForm);
 
   const [submitted, setSubmitted] = useState(false);
@@ -46,10 +47,17 @@ export default function Contact() {
     setForm({ ...form, [name]: value });
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
 
+    // if (!recaptchaRef.current) {
+    //   alert("Please complete the reCAPTCHA verification.");
+    //   setLoading(false);
+    //   return;
+    // }
+    // const recaptchaToken = await recaptchaRef.current.executeAsync();
+    // console.log("recaptchaToken", recaptchaToken);
     emailjs
       .send(
         SERVICE_ID,
@@ -60,39 +68,21 @@ export default function Contact() {
           from_email: form.email,
           to_email: "lerato.m029@gmail.com",
           message: form.message,
+          // "g-recaptcha-response": recaptchaToken,
         },
         EMAILJS_API_KEY
       )
       .then(
-        () => {
+        (res) => {
           setLoading(false);
           setSubmitted(true);
           setForm(defaultForm);
         },
         (error) => {
           setLoading(false);
-          console.log(error);
+          console.log("error msg", error);
         }
       );
-    // fetch("/api/contact", {
-    //   method: "POST",
-    //   headers: {
-    //     Accept: "application/json, text/plain, */*",
-    //     "Content-Type": "application/json",
-    //   },
-    //   body: JSON.stringify(data),
-    // }).then((res) => {
-
-    // if (res.status === 200) {
-    //   setLoading(false);
-    //   setSubmitted(true);
-    //   setName("");
-    //   setEmail("");
-    //   setMessage("");
-    // } else {
-
-    // }
-    // });
   };
   return (
     <div>
@@ -196,7 +186,12 @@ export default function Contact() {
                   onChange={handleFormChange}
                   className="d-block my-4 w-100 p-2 form-control"
                 />
-
+                {/* Invisible reCAPTCHA widget */}
+                {/* <ReCAPTCHA
+                  ref={recaptchaRef}
+                  sitekey={RECAPTCHA_SITE_KEY}
+                  size="invisible"
+                /> */}
                 <button type="submit" className="btn btn-success px-4 my-4">
                   Submit
                 </button>

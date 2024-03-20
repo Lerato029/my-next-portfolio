@@ -12,32 +12,6 @@ export default function UxUi({ uxui, caseStudies }) {
           <Col lg={12} className="p-0 middle">
             <Project project={uxui.verify} />
           </Col>
-          {/* 
-          <Col sm={12} lg={4} style={{ border: "4px solid #fff" }}>
-            <div className="">
-              <Project project={uxui.designSystem} />
-            </div>
-          </Col>
-          <Col sm={12} lg={4} className="p-0 middle">
-            <video
-              controls
-              autoPlay={true}
-              loop
-              muted
-              className="w100"
-              style={{ border: "2px solid #000000" }}
-            >
-              <source
-                src="/projects/uxui/task-manager.mov"
-                type="video/mp4"
-              ></source>
-            </video>
-          </Col>
-          <Col sm={12} lg={4} style={{ border: "4px solid #fff" }}>
-            <div className="">
-              <Project project={uxui.prototype} />
-            </div>
-          </Col> */}
         </Row>
       </Container>
       <Container className="py-5">
