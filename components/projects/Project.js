@@ -24,7 +24,6 @@ function Project({ project = defProject, isShowOverlay = true }) {
       <a
         className={project.url ? "" : "isDisabled"}
         href={`${project.url ? project.url : ""}`}
-        target="_blank"
         rel="noreferrer"
       >
         <Card.Img
@@ -46,7 +45,7 @@ function Project({ project = defProject, isShowOverlay = true }) {
             {project.tech && (
               <Card.Subtitle className="text-center textGrey maxWidthTxt px-2 pt-2">
                 {project.tech.map((item, index) => (
-                  <span>
+                  <span key={item + index}>
                     {index + 1 >= project.tech.length ? item : item + " | "}
                   </span>
                 ))}
